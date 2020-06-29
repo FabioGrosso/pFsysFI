@@ -22,6 +22,9 @@
   fifaafs.log, in the directory from which you run fifaafs.
 */
 
+#include "params.h"
+#include "log.h"
+
 #include <ctype.h>
 #include <dirent.h>
 #include <errno.h>
@@ -39,8 +42,7 @@
 #include <sys/xattr.h>
 #endif
 
-#include "params.h"
-#include "log.h"
+
 
 //  All the paths I see are relative to the root of the mounted
 //  filesystem.  In order to get to the underlying filesystem, I need to
