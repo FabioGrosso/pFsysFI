@@ -285,7 +285,7 @@ void log_statvfs(struct statvfs *sv)
 	
 }
 
-void log_utime(struct utimbuf *buf)
+/*void log_utime(struct utimbuf *buf)
 {
     log_msg("    buf:\n");
     
@@ -294,5 +294,5 @@ void log_utime(struct utimbuf *buf)
 	
     //    time_t modtime;
     log_struct(buf, modtime, 0x%08lx, );
-}
+}*/
 
