@@ -108,10 +108,6 @@ void log_conn(struct fuse_conn_info *conn)
     // unsigned proto_minor;
     log_struct(conn, proto_minor, %d, );
 
-    /** Is asynchronous read supported (read-write) */
-    // unsigned async_read;
-    log_struct(conn, async_read, %d, );
-
     /** Maximum size of the write buffer */
     // unsigned max_write;
     log_struct(conn, max_write, %d, );
@@ -154,8 +150,6 @@ void log_fi (struct fuse_file_info *fi)
 	
     /** Old file handle, don't use */
     //	unsigned long fh_old;	
-	log_struct(fi, fh_old, 0x%08lx,  );
-
     /** In case of a write operation indicates if this was caused by a
         writepage */
     //	int writepage;
