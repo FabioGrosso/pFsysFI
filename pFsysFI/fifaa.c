@@ -623,7 +623,7 @@ int fifaa_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t off
     // read the whole directory; the second means the buffer is full.
     do {
     log_msg("calling filler with name %s\n", de->d_name);
-    if (filler(buf, de->d_name, NULL, 0) != 0) {
+    if (filler(buf, de->d_name, NULL, 0, FUSE_FILL_DIR_PLUS) != 0) {
         log_msg("    ERROR fifaa_readdir filler:  buffer full");
         return -ENOMEM;
     }
@@ -820,7 +820,6 @@ struct fuse_operations fifaa_oper = {
   .getattr = fifaa_getattr,
   .readlink = fifaa_readlink,
   // no .getdir -- that's deprecated
-  .getdir = NULL,
   .mknod = fifaa_mknod,
   .mkdir = fifaa_mkdir,
   .unlink = fifaa_unlink,
@@ -831,7 +830,6 @@ struct fuse_operations fifaa_oper = {
   .chmod = fifaa_chmod,
   .chown = fifaa_chown,
   .truncate = fifaa_truncate,
-  .utime = fifaa_utime,
   .open = fifaa_open,
   .read = fifaa_read,
   .write = fifaa_write,
@@ -855,8 +853,6 @@ struct fuse_operations fifaa_oper = {
   .init = fifaa_init,
   .destroy = fifaa_destroy,
   .access = fifaa_access,
-  .ftruncate = fifaa_ftruncate,
-  .fgetattr = fifaa_fgetattr
 };
 
 void fifaa_usage()
