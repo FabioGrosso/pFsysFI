@@ -24,6 +24,7 @@
 
 #include "params.h"
 #include "log.h"
+#include "fault.h"
 
 #include <ctype.h>
 #include <dirent.h>
@@ -56,6 +57,8 @@ static void fifaa_fullpath(char fpath[PATH_MAX], const char *path)
                     // break here
 
 }
+
+static is_inject = false;
 
 ///////////////////////////////////////////////////////////
 //
@@ -360,6 +363,12 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
         );
     // no need to get fpath on this one, since I work from fi->fh not the path
     log_fi(fi);
+
+    if(is_inject == true){
+        FaultModel *fm = new FaultModel("bitflip",(void*)buf,size);
+        fm->inject();
+    }
+
 
     return log_syscall("pwrite", pwrite(fi->fh, buf, size, offset), 0);
 }
