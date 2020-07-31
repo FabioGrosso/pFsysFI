@@ -58,7 +58,7 @@ static void fifaa_fullpath(char fpath[PATH_MAX], const char *path)
 
 }
 
-static int is_inject = 0;
+static int is_inject = 1;
 
 ///////////////////////////////////////////////////////////
 //
