@@ -17,8 +17,8 @@ int generate_random(size_t size);
 void inject(Config config, void *buf, size_t size);
 
 // for bitflip model
-char** parepare_bitflip(void * buf, size_t size);
-void bit_flip(char **data, int num_bits);
+char* parepare_bitflip(void * buf, size_t size);
+void bit_flip(char *data, int num_bits);
 
 
 #endif
