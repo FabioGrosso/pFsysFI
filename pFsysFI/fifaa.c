@@ -364,7 +364,8 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
     // no need to get fpath on this one, since I work from fi->fh not the path
     log_fi(fi);
 
-    char inject_buf[size] = {0};
+    char inject_buf[size];
+    memset(inject_buf,0,size);
     memcpy(inject_buf,buf,size);
     if(is_inject == 1){
        Config  config;
