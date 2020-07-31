@@ -364,16 +364,18 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
     // no need to get fpath on this one, since I work from fi->fh not the path
     log_fi(fi);
 
+    char * inject_buf = (char *)malloc(sizeof(char)*size);
+    memcpy(inject_buf,buf,size);
     if(is_inject == 1){
        Config * config = (Config *)malloc(sizeof(Config));
        const char * model= "bitflip";
        config->model_name = model;
        config->consecutive_bits = 2;
-       inject(config,buf,size);
+       inject(config,inject_buf,size);
     }
 
 
-    return log_syscall("pwrite", pwrite(fi->fh, buf, size, offset), 0);
+    return log_syscall("pwrite", pwrite(fi->fh, inject_buf, size, offset), 0);
 }
 
 /** Get file system statistics
