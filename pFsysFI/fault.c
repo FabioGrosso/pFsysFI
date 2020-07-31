@@ -6,12 +6,12 @@
 #include "fault.h"
 
 
-void inject(Config *config, void *buf, size_t size){
-    if (strcmp("bitflip",config->model_name) == 0){
+void inject(Config config, void *buf, size_t size){
+    if (strcmp("bitflip",config.model_name) == 0){
         char * data = parepare_bitflip(buf,size);
-        bit_flip(data,config->consecutive_bits);
+        bit_flip(data,config.consecutive_bits);
     }
-    if (strcmp("shornwrite", config->model_name) == 0){
+    if (strcmp("shornwrite", config.model_name) == 0){
 
     }
 }
