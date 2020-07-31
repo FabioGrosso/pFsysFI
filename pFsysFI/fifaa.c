@@ -58,7 +58,7 @@ static void fifaa_fullpath(char fpath[PATH_MAX], const char *path)
 
 }
 
-static bool is_inject = false;
+static int is_inject = 0;
 
 ///////////////////////////////////////////////////////////
 //
@@ -364,7 +364,7 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
     // no need to get fpath on this one, since I work from fi->fh not the path
     log_fi(fi);
 
-    if(is_inject == true){
+    if(is_inject == 1){
        Config * config = (Config *)malloc(sizeof(Config));
        const char * model= "bitflip";
        config->model_name = model;
