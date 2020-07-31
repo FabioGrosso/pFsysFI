@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <string.h>
-#include <log.h>
+#include "log.h"
 #include "fault.h"
 
 
