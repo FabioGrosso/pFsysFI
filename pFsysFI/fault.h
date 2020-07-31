@@ -2,19 +2,10 @@
 #define _FAULT_H_
 
 #include "log.h"
-#include <exception>
+#include <stdexcept>
 #include <time.h>
 
 using namespace std;
-
-class MyException: public exception
-{
-  virtual const char* what() const throw()
-  {
-    return "No support fault model";
-  }
-} myex;
-
 
 class FaultModel{
     public:
@@ -45,7 +36,7 @@ class FaultModel{
                 name == "metadata")
                 return name;
             else
-                throw myex;
+                throw std::invalid_argument("fault model is not supported yet.");
         }
 
         char* parepare_bitflip(){
