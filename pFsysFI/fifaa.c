@@ -364,13 +364,14 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
     // no need to get fpath on this one, since I work from fi->fh not the path
     log_fi(fi);
 
-    char * inject_buf = (char *)malloc(sizeof(char)*size);
+    char inject_buf[size] = {0};
     memcpy(inject_buf,buf,size);
     if(is_inject == 1){
-       Config * config = (Config *)malloc(sizeof(Config));
+       Config  config;
        const char * model= "bitflip";
-       config->model_name = model;
-       config->consecutive_bits = 2;
+       config.model_name = model;
+       config.consecutive_bits = 2;
+       log_msg("load config is fine");
        inject(config,inject_buf,size);
     }
 
