@@ -58,7 +58,7 @@ static void fifaa_fullpath(char fpath[PATH_MAX], const char *path)
 
 }
 
-static is_inject = false;
+static bool is_inject = false;
 
 ///////////////////////////////////////////////////////////
 //
@@ -365,8 +365,11 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
     log_fi(fi);
 
     if(is_inject == true){
-        FaultModel *fm = new FaultModel("bitflip",(void*)buf,size);
-        fm->inject();
+       Config * config = (Config *)malloc(sizeof(Config));
+       const char * model= "bitflip";
+       config->model_name = model;
+       config->consecutive_bits = 2;
+       inject(config,buf,size);
     }
 
 
