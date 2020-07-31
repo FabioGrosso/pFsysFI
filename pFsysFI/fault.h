@@ -5,7 +5,7 @@
 
 
 
-typedef Configuration{
+typedef struct Configuration{
     const char * model_name;
     int consecutive_bits;
 } Config;
