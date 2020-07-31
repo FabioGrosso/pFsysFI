@@ -1,65 +1,24 @@
+
+
 #ifndef _FAULT_H_
 #define _FAULT_H_
 
-#include "log.h"
-#include <stdexcept>
-#include <time.h>
-
-using namespace std;
-
-class FaultModel{
-    public:
-        FaultModel(std::string name, void *buf, size_t size): model_name_{verify(name), buf_(buf), size_(size)};
-
-        void inject(){
-            if (model_name_ == "bitflip"){
-                char * data = parepare_bitflip();
-                bit_flip(data,2);
-            }
-            if (model_name_ == "shornwrite"){
-
-            }
-        }
 
 
-    private:
+typedef Configuration{
+    const char * model_name;
+    int consecutive_bits;
+} Config;
 
-        std::string model_name_;
-        void *buf_;
-        size_t size_;
 
-        static std::string verify(const std::string name){
-            if (name == "bitflip" || 
-                name == "shornwrite" ||
-                name == "misdirwrite" ||
-                name == "droppedwrite" ||
-                name == "metadata")
-                return name;
-            else
-                throw std::invalid_argument("fault model is not supported yet.");
-        }
+int generate_random(int size);
 
-        char* parepare_bitflip(){
-            char * buf_char = reinterpret_cast<char*>(buf_);
-            inject_index = generate_random(size_);
-            char data = buf_char[inject_index];
-            return &data;
-        }
 
-        size_t generate_random(size_t size){
-            srand(time(NULL));
-            return rand()%size;
-        }
+void inject(Config *config, void *buf, int size);
 
-        void bit_flip(char *data, int num_bits){
-            srand(time(NULL));
-            log_msg("original: %c ",*data);
-            size_t offset_start = rand()%(8-num_bits);
-            for (int i = 0; i < num_bits; i++){
-                *data ^= 1UL << offset_start+i;
-            }
-            log_msg("after: %c ",*data);
-        }
-};
+// for bitflip model
+char* parepare_bitflip(void * buf, int size);
+void bit_flip(char *data, int num_bits);
+
 
 #endif
