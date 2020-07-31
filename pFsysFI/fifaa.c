@@ -365,8 +365,11 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
     log_fi(fi);
 
     char inject_buf[size];
+
     memset(inject_buf,0,size);
+    log_msg("create tmp buf is fine");
     memcpy(inject_buf,buf,size);
+    log_msg("copy to tmp buf is fine");
     if(is_inject == 1){
        Config  config;
        const char * model= "bitflip";
