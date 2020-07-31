@@ -6,7 +6,7 @@
 #include "fault.h"
 
 
-void inject(Config *config, void *buf, int size){
+void inject(Config *config, void *buf, size_t size){
     if (strcmp("bitflip",config->model_name) == 0){
         char * data = parepare_bitflip(buf,size);
         bit_flip(data,config->consecutive_bits);
@@ -17,14 +17,14 @@ void inject(Config *config, void *buf, int size){
 }
 
 
-char* parepare_bitflip(void * buf, int size){
+char* parepare_bitflip(void * buf, size_t size){
     char * buf_char = (char *)(buf);
     int inject_index = generate_random(size);
     char data = buf_char[inject_index];
     return &data;
 }
 
-int generate_random(int size){
+int generate_random(size_t size){
     srand(time(NULL));
     return rand()%size;
 }
