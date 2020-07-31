@@ -49,7 +49,7 @@ void log_msg(const char *format, ...)
     va_start(ap, format);
 
     vfprintf(FIFAA_DATA->logfile, format, ap);
-    flush(FIFAA_DATA->logfile);
+    fflush(FIFAA_DATA->logfile);
 }
 
 // Report errors to logfile and give -errno to caller
