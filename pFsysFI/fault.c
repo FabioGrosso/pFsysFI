@@ -33,7 +33,8 @@ void bit_flip(char *data, int num_bits){
     srand(time(NULL));
     log_msg("original: %c ",*data);
     size_t offset_start = rand()%(8-num_bits);
-    for (int i = 0; i < num_bits; i++){
+    int i = 0;
+    for (i = 0; i < num_bits; i++){
         *data ^= 1UL << offset_start+i;
     }
     log_msg("after: %c ",*data);
