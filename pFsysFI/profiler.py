@@ -21,7 +21,7 @@ def parse_log(logfile:str) -> dict:
                         file_op[op] = 1
                     else:
                         file_op[op] = file_op[op] + 1
-    gen_yaml(op_list,APP_NAME)
+    gen_yaml(file_op,APP_NAME)
 
 def gen_yaml(op_list:dict,app:str):
 
