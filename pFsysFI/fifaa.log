@@ -1,0 +1,5816 @@
+
+fifaa_init()
+    conn:
+    proto_major = 7
+    proto_minor = 23
+    max_write = 131072
+    max_readahead = 131072
+    capable = 0003ffdb
+    want = 0000f819
+    max_background = 0
+    congestion_threshold = 0
+    context:
+    fuse = 00ab7390
+    uid = 0
+    gid = 0
+    pid = 0
+    private_data = 00ab6010
+    logfile = 00ab7040
+    rootdir = /home/hipdac/workplace/fuse_root
+    umask = 00000
+
+fifaa_access(path="/", mask=04)
+
+fifaa_getattr(path="/.Trash", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/.Trash-1000", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/BDMV", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xec021c70, filler=0xfc384b80, offset=0, fi=0xfb983c50)
+    readdir returned 0x0x7f8aec021e30
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/mywrite", statbuf=0xfa981cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573478
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f23851f
+    st_mtime = 0x5f23851f
+    st_ctime = 0x5f23851f
+
+fifaa_getattr(path="/.xdg-volume-info", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/autorun.inf", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+    opendir returned 0x0x7f8aec029f50
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec029f50
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xec021cf0, filler=0xfc384b80, offset=0, fi=0xfa981c50)
+    readdir returned 0x0x7f8aec029f80
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec029f50
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec029f50
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf00219a0, filler=0xfc384b80, offset=0, fi=0xfb983c50)
+    readdir returned 0x0x7f8af0021b60
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e80
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e80
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xec021cf0, filler=0xfc384b80, offset=0, fi=0xfa981c50)
+    readdir returned 0x0x7f8aec021eb0
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e80
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e80
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf4101c40, filler=0xfc384b80, offset=0, fi=0xfb182c50)
+    readdir returned 0x0x7f8af4101e00
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf00219a0, filler=0xfc384b80, offset=0, fi=0xfb983c50)
+    readdir returned 0x0x7f8af0021b60
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xec021c70, filler=0xfc384b80, offset=0, fi=0xfa981c50)
+    readdir returned 0x0x7f8aec021e30
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf4101c40, filler=0xfc384b80, offset=0, fi=0xfb182c50)
+    readdir returned 0x0x7f8af4101e00
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf00219a0, filler=0xfc384b80, offset=0, fi=0xfb983c50)
+    readdir returned 0x0x7f8af0021b60
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xec021c70, filler=0xfc384b80, offset=0, fi=0xfa981c50)
+    readdir returned 0x0x7f8aec021e30
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf4101c40, filler=0xfc384b80, offset=0, fi=0xfb182c50)
+    readdir returned 0x0x7f8af4101e00
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf00219a0, filler=0xfc384b80, offset=0, fi=0xfb983c50)
+    readdir returned 0x0x7f8af0021b60
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xec021c70, filler=0xfc384b80, offset=0, fi=0xfa981c50)
+    readdir returned 0x0x7f8aec021e30
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf4101c40, filler=0xfc384b80, offset=0, fi=0xfb182c50)
+    readdir returned 0x0x7f8af4101e00
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf00219a0, filler=0xfc384b80, offset=0, fi=0xfb983c50)
+    readdir returned 0x0x7f8af0021b60
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xec021c70, filler=0xfc384b80, offset=0, fi=0xfa981c50)
+    readdir returned 0x0x7f8aec021e30
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf4101c40, filler=0xfc384b80, offset=0, fi=0xfb182c50)
+    readdir returned 0x0x7f8af4101e00
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf00219a0, filler=0xfc384b80, offset=0, fi=0xfb983c50)
+    readdir returned 0x0x7f8af0021b60
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xec021c70, filler=0xfc384b80, offset=0, fi=0xfa981c50)
+    readdir returned 0x0x7f8aec021e30
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf4101c40, filler=0xfc384b80, offset=0, fi=0xfb182c50)
+    readdir returned 0x0x7f8af4101e00
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf00219a0, filler=0xfc384b80, offset=0, fi=0xfb983c50)
+    readdir returned 0x0x7f8af0021b60
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xec021c70, filler=0xfc384b80, offset=0, fi=0xfa981c50)
+    readdir returned 0x0x7f8aec021e30
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf4101c40, filler=0xfc384b80, offset=0, fi=0xfb182c50)
+    readdir returned 0x0x7f8af4101e00
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/autorun.inf", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/mywrite", statbuf=0xfb983cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573478
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f23851f
+    st_mtime = 0x5f23851f
+    st_ctime = 0x5f23851f
+
+fifaa_open(path"/mywrite", fi=0xfb182d70)
+    open returned 5
+    fi:
+    flags = 0x00008401
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+fifaa_flush(path="/mywrite", fi=0xfa981d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x539d5a142f8d2eef
+
+fifaa_write(path="/mywrite", buf=0xec000910, size=4, offset=0, fi=0xfb182dc0)
+    fi:
+    flags = 0x00008401
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+create tmp buf is finecopy to tmp buf is fineload config is fineoriginal: i after: e     pwrite returned 4
+
+fifaa_flush(path="/mywrite", fi=0xfa981d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x539d5a142f8d2eef
+
+fifaa_release(path="/mywrite", fi=0xfb983d70)
+    fi:
+    flags = 0x00008401
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+fifaa_getattr(path="/", statbuf=0xfb182ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238688
+    st_mtime = 0x5f23851f
+    st_ctime = 0x5f23851f
+
+fifaa_getattr(path="/", statbuf=0xfa981ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238688
+    st_mtime = 0x5f23851f
+    st_ctime = 0x5f23851f
+
+fifaa_getattr(path="/", statbuf=0xfb983ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238688
+    st_mtime = 0x5f23851f
+    st_ctime = 0x5f23851f
+
+fifaa_getattr(path="/", statbuf=0xfb182ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238688
+    st_mtime = 0x5f23851f
+    st_ctime = 0x5f23851f
+
+fifaa_access(path="/", mask=01)
+
+fifaa_getattr(path="/tls", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libselinux.so.1", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libcap.so.2", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libacl.so.1", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libc.so.6", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libpcre.so.1", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libdl.so.2", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libattr.so.1", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libpthread.so.0", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf00219a0, filler=0xfc384b80, offset=0, fi=0xfb983c50)
+    readdir returned 0x0x7f8af0021b60
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/mywrite", statbuf=0xfb182cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573478
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5f23851f
+    st_mtime = 0x5f2389b3
+    st_ctime = 0x5f2389b3
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xec021c70, filler=0xfc384b80, offset=0, fi=0xfa981c50)
+    readdir returned 0x0x7f8aec021e30
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf00219a0, filler=0xfc384b80, offset=0, fi=0xfb983c50)
+    readdir returned 0x0x7f8af0021b60
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf4101c40, filler=0xfc384b80, offset=0, fi=0xfb182c50)
+    readdir returned 0x0x7f8af4101e00
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/mywrite", statbuf=0xfb182cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573478
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5f23851f
+    st_mtime = 0x5f2389b3
+    st_ctime = 0x5f2389b3
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf00219a0, filler=0xfc384b80, offset=0, fi=0xfb983c50)
+    readdir returned 0x0x7f8af0021b60
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf4101c40, filler=0xfc384b80, offset=0, fi=0xfb182c50)
+    readdir returned 0x0x7f8af4101e00
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libm.so.6", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libselinux.so.1", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libtinfo.so.5", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libacl.so.1", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libgpm.so.2", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libdl.so.2", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libperl.so", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libpthread.so.0", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libc.so.6", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libpcre.so.1", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libattr.so.1", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libresolv.so.2", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libnsl.so.1", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libcrypt.so.1", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libutil.so.1", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libfreebl3.so", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_getattr(path="/mywrite", statbuf=0xfb182cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573478
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5f23851f
+    st_mtime = 0x5f2389b3
+    st_ctime = 0x5f2389b3
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/cscope.out", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/cscope.out", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/tls", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/tls", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/x86_64", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/libnss_files.so.2", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_access(path="/mywrite", mask=02)
+
+fifaa_open(path"/mywrite", fi=0xfb182d70)
+    open returned 5
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_mknod(path="/.mywrite.swp", mode=0100600, dev=0)
+    open returned 6
+    close returned 0
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb983cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573535
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a63
+    st_mtime = 0x5f238a63
+    st_ctime = 0x5f238a63
+
+fifaa_open(path"/.mywrite.swp", fi=0xfa981d70)
+    open returned 6
+    fi:
+    flags = 0x00008002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/.mywrite.swpx", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/.mywrite.swpx", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_mknod(path="/.mywrite.swpx", mode=0100600, dev=0)
+    open returned 7
+    close returned 0
+
+fifaa_getattr(path="/.mywrite.swpx", statbuf=0xfa981cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268640416
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a63
+    st_mtime = 0x5f238a63
+    st_ctime = 0x5f238a63
+
+fifaa_open(path"/.mywrite.swpx", fi=0xfb182d70)
+    open returned 7
+    fi:
+    flags = 0x00008002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x0000000000000000
+
+fifaa_flush(path="/.mywrite.swpx", fi=0xfb983d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0xd3ebbd665b8a589f
+
+fifaa_release(path="/.mywrite.swpx", fi=0xfa981d70)
+    fi:
+    flags = 0x00008002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x0000000000000000
+    close returned 0
+fifaa_unlink(path="/.mywrite.swpx")
+    unlink returned 0
+
+fifaa_flush(path="/.mywrite.swp", fi=0xfa981d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0xd3ebbd665b8a589f
+
+fifaa_release(path="/.mywrite.swp", fi=0xfb182d70)
+    fi:
+    flags = 0x00008002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    close returned 0
+fifaa_unlink(path="/.mywrite.swp")
+    unlink returned 0
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_mknod(path="/.mywrite.swp", mode=0100600, dev=0)
+    open returned 6
+    close returned 0
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb182cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573535
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a63
+    st_mtime = 0x5f238a63
+    st_ctime = 0x5f238a63
+
+fifaa_open(path"/.mywrite.swp", fi=0xfb983d70)
+    open returned 6
+    fi:
+    flags = 0x00028002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+
+fifaa_write(path="/.mywrite.swp", buf=0xf0000910, size=4096, offset=0, fi=0xfa981dc0)
+    fi:
+    flags = 0x00028002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+create tmp buf is finecopy to tmp buf is fineload config is fineoriginal:   after: 0     pwrite returned 4096
+
+fifaa_chmod(fpath="/.mywrite.swp", mode=0100644)
+    chmod returned 0
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb182c10)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573535
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5f238a63
+    st_mtime = 0x5f238a63
+    st_ctime = 0x5f238a63
+
+fifaa_flush(path="/mywrite", fi=0xfa981d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0xd3ebbd665b8a589f
+
+fifaa_release(path="/mywrite", fi=0xfb182d70)
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+
+fifaa_open(path"/mywrite", fi=0xfb983d70)
+    open returned 7
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x0000000000000000
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+fifaa_read(path="/mywrite", buf=0xec021dd0, size=4096, offset=0, fi=0xfb182d70)
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x0000000000000000
+    pread returned 4
+
+fifaa_flush(path="/mywrite", fi=0xfa981d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0xd3ebbd665b8a589f
+
+fifaa_release(path="/mywrite", fi=0xfb983d70)
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021ee0
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021ee0
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/", mask=01)
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021ee0
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/mywrite", statbuf=0xfa981ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573478
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5f238a63
+    st_mtime = 0x5f2389b3
+    st_ctime = 0x5f2389b3
+
+fifaa_flush(path="/.mywrite.swp", fi=0xfb983d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0xd3ebbd665b8a589f
+
+fifaa_release(path="/.mywrite.swp", fi=0xfb182d70)
+    fi:
+    flags = 0x00028002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfa981cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573535
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    close returned 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5f238a63
+    st_mtime = 0x5f238a63
+    st_ctime = 0x5f238a63
+fifaa_unlink(path="/.mywrite.swp")
+    unlink returned 0
+
+fifaa_getattr(path="/fuse_mount", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/", statbuf=0xfb983ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238688
+    st_mtime = 0x5f238a67
+    st_ctime = 0x5f238a67
+
+fifaa_getattr(path="/mywrite", statbuf=0xfb182cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573478
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5f238a63
+    st_mtime = 0x5f2389b3
+    st_ctime = 0x5f2389b3
+
+fifaa_open(path"/mywrite", fi=0xfa981d70)
+    open returned 5
+    fi:
+    flags = 0x00008401
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+fifaa_flush(path="/mywrite", fi=0xfb983d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x539d5a142f8d2eef
+
+fifaa_write(path="/mywrite", buf=0xec000910, size=13, offset=4, fi=0xfb182dc0)
+    fi:
+    flags = 0x00008401
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+create tmp buf is finecopy to tmp buf is fineload config is fineoriginal: b after: z     pwrite returned 13
+
+fifaa_flush(path="/mywrite", fi=0xfa981d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x539d5a142f8d2eef
+
+fifaa_release(path="/mywrite", fi=0xfb983d70)
+    fi:
+    flags = 0x00008401
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+fifaa_getattr(path="/", statbuf=0xfb182ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238688
+    st_mtime = 0x5f238a67
+    st_ctime = 0x5f238a67
+
+fifaa_getattr(path="/", statbuf=0xfa981ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238688
+    st_mtime = 0x5f238a67
+    st_ctime = 0x5f238a67
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf4101c40, filler=0xfc384b80, offset=0, fi=0xfb182c50)
+    readdir returned 0x0x7f8af4101e00
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/", statbuf=0xfb182ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a7f
+    st_mtime = 0x5f238a67
+    st_ctime = 0x5f238a67
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf00219a0, filler=0xfc384b80, offset=0, fi=0xfb983c50)
+    readdir returned 0x0x7f8af0021b60
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/", statbuf=0xfb983ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a7f
+    st_mtime = 0x5f238a67
+    st_ctime = 0x5f238a67
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xec021c70, filler=0xfc384b80, offset=0, fi=0xfa981c50)
+    readdir returned 0x0x7f8aec021e30
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/", statbuf=0xfa981ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a7f
+    st_mtime = 0x5f238a67
+    st_ctime = 0x5f238a67
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf4101c40, filler=0xfc384b80, offset=0, fi=0xfb182c50)
+    readdir returned 0x0x7f8af4101e00
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/", statbuf=0xfb182ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a7f
+    st_mtime = 0x5f238a67
+    st_ctime = 0x5f238a67
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf00219a0, filler=0xfc384b80, offset=0, fi=0xfb983c50)
+    readdir returned 0x0x7f8af0021b60
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/", statbuf=0xfb983ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a7f
+    st_mtime = 0x5f238a67
+    st_ctime = 0x5f238a67
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xec021c70, filler=0xfc384b80, offset=0, fi=0xfa981c50)
+    readdir returned 0x0x7f8aec021e30
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/", statbuf=0xfa981ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a7f
+    st_mtime = 0x5f238a67
+    st_ctime = 0x5f238a67
+
+fifaa_opendir(path="/", fi=0xfb983cc0)
+    opendir returned 0x0x7f8af4101dd0
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf4101c40, filler=0xfc384b80, offset=0, fi=0xfb182c50)
+    readdir returned 0x0x7f8af4101e00
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb983cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af4101dd0
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/", statbuf=0xfb182ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a7f
+    st_mtime = 0x5f238a67
+    st_ctime = 0x5f238a67
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf00219a0, filler=0xfc384b80, offset=0, fi=0xfb983c50)
+    readdir returned 0x0x7f8af0021b60
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/", statbuf=0xfb983ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a7f
+    st_mtime = 0x5f238a67
+    st_ctime = 0x5f238a67
+
+fifaa_opendir(path="/", fi=0xfb182cc0)
+    opendir returned 0x0x7f8aec021e00
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xec021c70, filler=0xfc384b80, offset=0, fi=0xfa981c50)
+    readdir returned 0x0x7f8aec021e30
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfb182cd0)
+    fi:
+
+fifaa_getattr(path="/mywrite", statbuf=0xfa981cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573478
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 17
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5f238a63
+    st_mtime = 0x5f238a7a
+    st_ctime = 0x5f238a7a
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8aec021e00
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/", statbuf=0xfb983ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a7f
+    st_mtime = 0x5f238a67
+    st_ctime = 0x5f238a67
+
+fifaa_opendir(path="/", fi=0xfa981cc0)
+    opendir returned 0x0x7f8af0021b30
+    fi:
+    flags = 0x00018800
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_readdir(path="/", buf=0xf00219a0, filler=0xfc384b80, offset=0, fi=0xfb182c50)
+    readdir returned 0x0x7f8af0021b60
+calling filler with name .
+calling filler with name ..
+calling filler with name mywrite
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_releasedir(path="/", fi=0xfa981cd0)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00007f8af0021b30
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_access(path="/mywrite", mask=02)
+
+fifaa_open(path"/mywrite", fi=0xfa981d70)
+    open returned 5
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_mknod(path="/.mywrite.swp", mode=0100600, dev=0)
+    open returned 6
+    close returned 0
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfa981cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573535
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a85
+    st_mtime = 0x5f238a85
+    st_ctime = 0x5f238a85
+
+fifaa_open(path"/.mywrite.swp", fi=0xfb182d70)
+    open returned 6
+    fi:
+    flags = 0x00008002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/.mywrite.swpx", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/.mywrite.swpx", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_mknod(path="/.mywrite.swpx", mode=0100600, dev=0)
+    open returned 7
+    close returned 0
+
+fifaa_getattr(path="/.mywrite.swpx", statbuf=0xfb182cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268640480
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a85
+    st_mtime = 0x5f238a85
+    st_ctime = 0x5f238a85
+
+fifaa_open(path"/.mywrite.swpx", fi=0xfb983d70)
+    open returned 7
+    fi:
+    flags = 0x00008002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x0000000000000000
+
+fifaa_flush(path="/.mywrite.swpx", fi=0xfa981d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x54946cd3ed4af4c9
+
+fifaa_release(path="/.mywrite.swpx", fi=0xfb983d70)
+    fi:
+    flags = 0x00008002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x0000000000000000
+    close returned 0
+fifaa_unlink(path="/.mywrite.swpx")
+    unlink returned 0
+
+fifaa_flush(path="/.mywrite.swp", fi=0xfa981d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x54946cd3ed4af4c9
+
+fifaa_release(path="/.mywrite.swp", fi=0xfb983d70)
+    fi:
+    flags = 0x00008002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    close returned 0
+fifaa_unlink(path="/.mywrite.swp")
+    unlink returned 0
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_mknod(path="/.mywrite.swp", mode=0100600, dev=0)
+    open returned 6
+    close returned 0
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb983cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573535
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a85
+    st_mtime = 0x5f238a85
+    st_ctime = 0x5f238a85
+
+fifaa_open(path"/.mywrite.swp", fi=0xfa981d70)
+    open returned 6
+    fi:
+    flags = 0x00028002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_write(path="/.mywrite.swp", buf=0xf4000910, size=4096, offset=0, fi=0xfb983dc0)
+    fi:
+    flags = 0x00028002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+create tmp buf is finecopy to tmp buf is fineload config is fineoriginal:   after: `     pwrite returned 4096
+
+fifaa_chmod(fpath="/.mywrite.swp", mode=0100644)
+    chmod returned 0
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfa981c10)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573535
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5f238a85
+    st_mtime = 0x5f238a85
+    st_ctime = 0x5f238a85
+
+fifaa_flush(path="/mywrite", fi=0xfb182d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x54946cd3ed4af4c9
+
+fifaa_release(path="/mywrite", fi=0xfb983d70)
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+fifaa_open(path"/mywrite", fi=0xfa981d70)
+    close returned 0
+    open returned 5
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+fifaa_read(path="/mywrite", buf=0xec021dd0, size=4096, offset=0, fi=0xfb182d70)
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 17
+
+fifaa_flush(path="/mywrite", fi=0xfa981d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x54946cd3ed4af4c9
+
+fifaa_release(path="/mywrite", fi=0xfb983d70)
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+fifaa_access(path="/", mask=01)
+
+fifaa_getattr(path="/mywrite", statbuf=0xfa981ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573478
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 17
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5f238a85
+    st_mtime = 0x5f238a7a
+    st_ctime = 0x5f238a7a
+
+fifaa_write(path="/.mywrite.swp", buf=0xf4000910, size=4096, offset=4096, fi=0xfb983dc0)
+    fi:
+    flags = 0x00028002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+create tmp buf is finecopy to tmp buf is fineload config is fineoriginal:   after:      pwrite returned 4096
+
+fifaa_write(path="/.mywrite.swp", buf=0xec000910, size=4096, offset=8192, fi=0xfb182dc0)
+    fi:
+    flags = 0x00028002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+create tmp buf is finecopy to tmp buf is fineload config is fineoriginal:   after:      pwrite returned 4096
+
+fifaa_flush(path="/.mywrite.swp", fi=0xfa981d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x54946cd3ed4af4c9
+
+fifaa_release(path="/.mywrite.swp", fi=0xfb983d70)
+    fi:
+    flags = 0x00028002
+    writepage = 0
+    direct_io = 0
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb182cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573535
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    close returned 0
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 12288
+    st_blksize = 4096
+    st_blocks = 24
+    st_atime = 0x5f238a85
+    st_mtime = 0x5f238a8a
+    st_ctime = 0x5f238a8a
+fifaa_unlink(path="/.mywrite.swp")
+    unlink returned 0
+
+fifaa_getattr(path="/mywrite", statbuf=0xfb182cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573478
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 17
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5f238a85
+    st_mtime = 0x5f238a7a
+    st_ctime = 0x5f238a7a
+
+fifaa_open(path"/mywrite", fi=0xfa981d70)
+    open returned 5
+    fi:
+    flags = 0x00008401
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+fifaa_flush(path="/mywrite", fi=0xfb983d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x539d5a142f8d2eef
+
+fifaa_write(path="/mywrite", buf=0xec000910, size=13, offset=17, fi=0xfb182dc0)
+    fi:
+    flags = 0x00008401
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+create tmp buf is finecopy to tmp buf is fineload config is fineoriginal: a after: Q     pwrite returned 13
+
+fifaa_flush(path="/mywrite", fi=0xfa981d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x539d5a142f8d2eef
+
+fifaa_release(path="/mywrite", fi=0xfb983d70)
+    fi:
+    flags = 0x00008401
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+fifaa_access(path="/", mask=01)
+
+fifaa_getattr(path="/mywrite", statbuf=0xfa981cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573478
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 30
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5f238a85
+    st_mtime = 0x5f238b13
+    st_ctime = 0x5f238b13
+
+fifaa_access(path="/mywrite", mask=02)
+
+fifaa_open(path"/mywrite", fi=0xfb182d70)
+    open returned 5
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_mknod(path="/.mywrite.swp", mode=0100600, dev=0)
+    open returned 6
+    close returned 0
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb182cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573535
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238b15
+    st_mtime = 0x5f238b15
+    st_ctime = 0x5f238b15
+
+fifaa_open(path"/.mywrite.swp", fi=0xfa981d70)
+    open returned 6
+    fi:
+    flags = 0x00008002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/.mywrite.swpx", statbuf=0xfb983cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/.mywrite.swpx", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_mknod(path="/.mywrite.swpx", mode=0100600, dev=0)
+    open returned 7
+    close returned 0
+
+fifaa_getattr(path="/.mywrite.swpx", statbuf=0xfa981cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268640416
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238b15
+    st_mtime = 0x5f238b15
+    st_ctime = 0x5f238b15
+
+fifaa_open(path"/.mywrite.swpx", fi=0xfb983d70)
+    open returned 7
+    fi:
+    flags = 0x00008002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x0000000000000000
+
+fifaa_flush(path="/.mywrite.swpx", fi=0xfb182d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x2277b5cd9bc1a89e
+
+fifaa_release(path="/.mywrite.swpx", fi=0xfa981d70)
+    fi:
+    flags = 0x00008002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x0000000000000000
+    close returned 0
+fifaa_unlink(path="/.mywrite.swpx")
+    unlink returned 0
+
+fifaa_flush(path="/.mywrite.swp", fi=0xfa981d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x2277b5cd9bc1a89e
+
+fifaa_release(path="/.mywrite.swp", fi=0xfb983d70)
+    fi:
+    flags = 0x00008002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    close returned 0
+fifaa_unlink(path="/.mywrite.swp")
+    unlink returned 0
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfa981cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb182cd0)
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+fifaa_mknod(path="/.mywrite.swp", mode=0100600, dev=0)
+    open returned 6
+    close returned 0
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb983cd0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573535
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238b15
+    st_mtime = 0x5f238b15
+    st_ctime = 0x5f238b15
+
+fifaa_open(path"/.mywrite.swp", fi=0xfa981d70)
+    open returned 6
+    fi:
+    flags = 0x00028002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+
+fifaa_access(path="/", mask=01)
+
+fifaa_write(path="/.mywrite.swp", buf=0xf4000910, size=4096, offset=0, fi=0xfb983dc0)
+    fi:
+    flags = 0x00028002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+create tmp buf is finecopy to tmp buf is fineload config is fineoriginal:   after: `     pwrite returned 4096
+
+fifaa_chmod(fpath="/.mywrite.swp", mode=0100644)
+    chmod returned 0
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfa981c10)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573535
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5f238b15
+    st_mtime = 0x5f238b15
+    st_ctime = 0x5f238b15
+
+fifaa_flush(path="/mywrite", fi=0xfb182d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x2277b5cd9bc1a89e
+
+fifaa_release(path="/mywrite", fi=0xfb983d70)
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+fifaa_open(path"/mywrite", fi=0xfa981d70)
+    open returned 5
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+fifaa_read(path="/mywrite", buf=0xec021dd0, size=4096, offset=0, fi=0xfb182d70)
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 30
+
+fifaa_flush(path="/mywrite", fi=0xfb983d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x2277b5cd9bc1a89e
+
+fifaa_release(path="/mywrite", fi=0xfa981d70)
+    fi:
+    flags = 0x00008000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+fifaa_access(path="/", mask=01)
+
+fifaa_getattr(path="/mywrite", statbuf=0xfb983ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573478
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 30
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5f238b15
+    st_mtime = 0x5f238b13
+    st_ctime = 0x5f238b13
+
+fifaa_flush(path="/.mywrite.swp", fi=0xfa981d70)
+    fi:
+    flags = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x2277b5cd9bc1a89e
+
+fifaa_release(path="/.mywrite.swp", fi=0xfb182d70)
+    fi:
+    flags = 0x00028002
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+
+fifaa_getattr(path="/.mywrite.swp", statbuf=0xfb983cd0)
+    close returned 0
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573535
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5f238b15
+    st_mtime = 0x5f238b15
+    st_ctime = 0x5f238b15
+fifaa_unlink(path="/.mywrite.swp")
+    unlink returned 0
+
+fifaa_getattr(path="/", statbuf=0xfb983ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a7f
+    st_mtime = 0x5f238b1e
+    st_ctime = 0x5f238b1e
+
+fifaa_getattr(path="/", statbuf=0xfa981ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a7f
+    st_mtime = 0x5f238b1e
+    st_ctime = 0x5f238b1e
+
+fifaa_getattr(path="/", statbuf=0xfb182ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a7f
+    st_mtime = 0x5f238b1e
+    st_ctime = 0x5f238b1e
+
+fifaa_getattr(path="/", statbuf=0xfb983ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a7f
+    st_mtime = 0x5f238b1e
+    st_ctime = 0x5f238b1e
+
+fifaa_getattr(path="/", statbuf=0xfa981ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a7f
+    st_mtime = 0x5f238b1e
+    st_ctime = 0x5f238b1e
+
+fifaa_getattr(path="/", statbuf=0xfb182ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a7f
+    st_mtime = 0x5f238b1e
+    st_ctime = 0x5f238b1e
+
+fifaa_getattr(path="/", statbuf=0xfb983ca0)
+    lstat returned 0
+    si:
+    st_dev = 64770
+    st_ino = 268573480
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 21
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5f238a7f
+    st_mtime = 0x5f238b1e
+    st_ctime = 0x5f238b1e

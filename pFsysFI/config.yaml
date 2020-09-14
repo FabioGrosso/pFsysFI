@@ -7,6 +7,15 @@ parameters:
   - "-o output"
 
 injection:
-  fault_model:
-    - "bitflip"
+  # we now support multiple injection types:
+  # shornwrite, bitflip, dorppedwrite
+  inject_flag: 0
+  fault_model: "bitflip" 
+  num_trials: 100
 
+fault_op:
+  bitflip:
+    - fiffa_write
+
+  shornwrite:
+    - fiffa_write
