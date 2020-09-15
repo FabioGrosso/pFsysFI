@@ -11,6 +11,7 @@ YAML = ".yaml"
 CONFIG = "config"
 FS_PREFIX = "fifaa"
 OP_MATCHING = FS_PREFIX+"_"+r'.*\(.*?\)'
+FS_LOG = FS_PREFIX+".log"
 ERROR_FILE = "_ficonfig"
 
 
@@ -84,7 +85,7 @@ def get_fault_op(fault_model,fault_op_loader)->list:
             raise ValueError
         return fault_op_loader['shornwrite']
 
-def get_target_op(op,file_op):
+def get_target_op(op,file_op)->int:
 
     total = file_op[op]
     random.seed(datatime.now())
@@ -126,10 +127,61 @@ def get_injection_trial(injection_loader)->int:
         raise ValueError
     return injection_loader['num_trial']
 
-def write_to_fuse(error_mode,op_name,)
+def write_to_fuse(error_mode,fault_model,op_name,count):
+    with open(FS_PREFIX+ERROR_FILE,'w') as f:
+        f.writeline(error_mode)
+        f.writeline(fault_model)
+        f.writeline(op_name)
+        f.writeline(count)
+
+def get_app(yaml_loader)->str:
+    if "benchmark" not in yaml_loader:
+        logging.error("benchmark not configured")
+        raise ValueError
+    return yaml_loader['benchmark']
+
+def get_app_params(yaml_loader)->list:
+    if "parameters" not in yaml_loader:
+        logging.error("benchmark not configured")
+        raise ValueError
+
+    return yaml_loader['parameters']
+
 
 yaml_loader = config_loader(CONFIG+YAML)
-file_op = parse_log("fifaa.log",yaml_loader)
+app = get_app(yaml_loader)
+params = get_app_params(yaml_loader)
+# run profiling to get the fiffa log
+execution = []
+execution.append(app)
+execution.extend(params)
+process = subprocess.Popen(execution, stdout=PIPE, stderr=PIPE)
+stdout, stderr = process.communicate()
+
+if os.path.isfile(FS_LOG) == False:
+    print("NO FS LOG FILE FOUND")
+    raise ValueError
+
+file_op = parse_log(FS_LOG,yaml_loader)
+
+# obtain the fault injection configuration
+fault_op_list = get_fault_op(yaml_loader)
+
+injection_loader = get_inject_model(yaml_loader)
+
+flag = get_injection_flag(injection_loader)
+
+fault_model = get_fault_model(injection_loader)
+
+num_trial = get_injection_trial(injection_loader)
+
+# 
+for i in range(num_trial):
+
+    fault_ops = get_target_op(fault_model,fault_op_list)
+    random.seed(datatime.now())
+    op = random.choise(fault_ops)
+    instance = get_target_op(op,file_op)
 
 
 
