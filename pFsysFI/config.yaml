@@ -1,4 +1,4 @@
-logfile: "fifaa.log"
+logfile: "fifaa.config"
 
 benchmark: "x"
 
@@ -19,3 +19,10 @@ fault_op:
 
   shornwrite:
     - fiffa_write
+
+fault_model_spec:
+  bitflip:
+    consecutive_bits: 2
+
+  shornwrite:
+    shorn_portion: 0.1

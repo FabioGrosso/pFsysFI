@@ -58,7 +58,9 @@ static void fifaa_fullpath(char fpath[PATH_MAX], const char *path)
 
 }
 
-static int is_inject = 1;
+static Config config;
+static int write_counter = 0;
+
 
 ///////////////////////////////////////////////////////////
 //
@@ -356,6 +358,7 @@ int fifaa_read(const char *path, char *buf, size_t size, off_t offset, struct fu
 int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
          struct fuse_file_info *fi)
 {
+    write_counter ++;
     int retstat = 0;
     
     log_msg("\nfifaa_write(path=\"%s\", buf=0x%08x, size=%d, offset=%lld, fi=0x%08x)\n",
@@ -370,13 +373,13 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
     log_msg("create tmp buf is fine");
     memcpy(inject_buf,buf,size);
     log_msg("copy to tmp buf is fine");
-    if(is_inject == 1){
-       Config  config;
-       const char * model= "bitflip";
-       config.model_name = model;
-       config.consecutive_bits = 2;
-       log_msg("load config is fine");
-       inject(config,inject_buf,size);
+   
+    if(config.is_inject == 1){
+        if (strcmp("fiffa_write",config.op_name) == 0){
+            if (write_counter == config->instance){
+                inject(config,inject_buf,size);
+            }
+        }
     }
 
 
@@ -716,6 +719,8 @@ void *fifaa_init(struct fuse_conn_info *conn)
     log_conn(conn);
     log_fuse_context(fuse_get_context());
     
+    load_config(&config);
+
     return FIFAA_DATA;
 }
 

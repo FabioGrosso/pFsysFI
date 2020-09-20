@@ -5,6 +5,7 @@
 #include "log.h"
 #include "fault.h"
 
+#define CONFIG_FILE "fiffa.config"
 
 void inject(Config config, void *buf, size_t size){
     if (strcmp("bitflip",config.model_name) == 0){
@@ -38,4 +39,51 @@ void bit_flip(char *data, int num_bits){
         *data ^= 1UL << offset_start+i;
     }
     log_msg("after: %c ",*data);
+}
+
+void load_config(Config *config){
+    char *line = NULL;
+    size_t len = 0;
+    ssize_t read;
+    FILE *fp = fopen(CONFIG_FILE,"r");
+    FILE *f_spec = NULL;
+    if (f == NULL){
+        log_msg("Can not open config file for FIFAA");
+        exit(EXIT_FAILURE);
+    }
+    // read line by line
+    // 1. error mode
+    read = getline(&line, &len, fp);
+    config->is_inject = atoi(line);
+    // 2. fault model
+    read = getline(&line, &len, fp);
+    config->model_name = line;
+    // 3. op name
+    read = getline(&line, &len, fp);
+    config->op_name  = line;
+    // 4. instance
+    read = getline(&line, &len, fp);
+    config->instance  = atoi(line);
+    fclose(fp);
+    // need to read the spec file 
+    if (strcmp("bitflip",config.model_name) == 0){
+        f_spec = fopen(config.model_name,"r");
+        if (f_spec == NULL){
+            log_msg("Can not open spec file for bitflip");
+            exit(EXIT_FAILURE);
+        }
+        read = getline(&line, &len, f_spec);
+        config->consecutive_bits = atoi(line);
+        fclose(f_spec);
+    }
+    if (strcmp("shornwrite", config.model_name) == 0){
+        f_spec = fopen(config.model_name,"r");
+        if (f_spec == NULL){
+            log_msg("Can not open spec file for shornwrite");
+            exit(EXIT_FAILURE);
+        }
+        read = getline(&line, &len, f_spec);
+        config->shornwrite_portion = atof(line);
+        fclose(f_spec);
+    }
 }

@@ -11,7 +11,7 @@ YAML = ".yaml"
 CONFIG = "config"
 FS_PREFIX = "fifaa"
 OP_MATCHING = FS_PREFIX+"_"+r'.*\(.*?\)'
-FS_LOG = FS_PREFIX+".log"
+FS_LOG = FS_PREFIX+".config"
 ERROR_FILE = "_ficonfig"
 
 
@@ -129,10 +129,14 @@ def get_injection_trial(injection_loader)->int:
 
 def write_to_fuse(error_mode,fault_model,op_name,count):
     with open(FS_PREFIX+ERROR_FILE,'w') as f:
-        f.writeline(error_mode)
-        f.writeline(fault_model)
-        f.writeline(op_name)
-        f.writeline(count)
+        f.write(error_mode)
+        f.write("\n")
+        f.write(fault_model)
+        f.write("\n")
+        f.write(op_name)
+        f.write("\n")
+        f.write(count)
+        f.write("\n")
 
 def get_app(yaml_loader)->str:
     if "benchmark" not in yaml_loader:
@@ -147,6 +151,34 @@ def get_app_params(yaml_loader)->list:
 
     return yaml_loader['parameters']
 
+def get_fault_model_spec(yaml_loader):
+    if "fault_model_spec" not in yaml_loader:
+        logging.error("benchmark not configured")
+        raise ValueError
+    return yaml_loader['fault_model_spec']
+
+def get_bitflip_spec(fault_model_spec_loader):
+    if "bitflip" not in fault_model_spec_loader:
+        logging.error("bitflip spec not configured")
+        raise ValueError
+    ret = []
+    ret.append(fault_model_spec_loader['bitflip']['consecutive_bits'])
+    return ret
+
+def get_shornwrite_spec(fault_model_spec_loader):
+     if "shornwrite" not in fault_model_spec_loader:
+        logging.error("shornwrite spec not configured")
+        raise ValueError
+    ret = []
+    ret.append(fault_model_spec_loader['shornwrite']['shorn_portion'])
+    return ret
+
+
+def write_fault_model_spec(fault_model,specs):
+    with open(fault_model,'w') as f:
+        for spec in specs:
+            f.write(spec)
+            f.write("\n")
 
 yaml_loader = config_loader(CONFIG+YAML)
 app = get_app(yaml_loader)
@@ -175,6 +207,8 @@ fault_model = get_fault_model(injection_loader)
 
 num_trial = get_injection_trial(injection_loader)
 
+fault_model_spec_loader = get_fault_model_spec(yaml_loader)
+
 # 
 for i in range(num_trial):
 
@@ -182,6 +216,13 @@ for i in range(num_trial):
     random.seed(datatime.now())
     op = random.choise(fault_ops)
     instance = get_target_op(op,file_op)
-
+    write_to_fuse(flag,fault_model,op,instance)
+    if fault_model == 'bitflip':
+        specs = get_bitflip_spec(fault_model_spec_loader)
+        write_fault_model_spec(fault_model,specs)
+    if fault_model == 'shornwrite':
+        specs = get_shornwrite_spec(fault_model_spec_loader)
+        write_fault_model_spec(fault_model,specs)
+    
 
 
