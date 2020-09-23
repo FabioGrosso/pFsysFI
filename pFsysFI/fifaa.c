@@ -714,12 +714,15 @@ int fifaa_fsyncdir(const char *path, int datasync, struct fuse_file_info *fi)
 // FUSE).
 void *fifaa_init(struct fuse_conn_info *conn)
 {
+    int ret = 0;
     log_msg("\nfifaa_init()\n");
-    
     log_conn(conn);
     log_fuse_context(fuse_get_context());
     
-    load_config(&config);
+    ret = load_config(&config);
+    if (ret == -1){
+        config.is_inject = 0;
+    }
 
     return FIFAA_DATA;
 }

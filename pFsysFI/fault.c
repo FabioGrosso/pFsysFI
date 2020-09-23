@@ -41,7 +41,7 @@ void bit_flip(char *data, int num_bits){
     log_msg("after: %c ",*data);
 }
 
-void load_config(Config *config){
+int load_config(Config *config){
     char *line = NULL;
     size_t len = 0;
     ssize_t read;
@@ -49,7 +49,7 @@ void load_config(Config *config){
     FILE *f_spec = NULL;
     if (f == NULL){
         log_msg("Can not open config file for FIFAA");
-        exit(EXIT_FAILURE);
+        return -1;
     }
     // read line by line
     // 1. error mode
@@ -70,7 +70,7 @@ void load_config(Config *config){
         f_spec = fopen(config.model_name,"r");
         if (f_spec == NULL){
             log_msg("Can not open spec file for bitflip");
-            exit(EXIT_FAILURE);
+            return -1;
         }
         read = getline(&line, &len, f_spec);
         config->consecutive_bits = atoi(line);
@@ -80,10 +80,12 @@ void load_config(Config *config){
         f_spec = fopen(config.model_name,"r");
         if (f_spec == NULL){
             log_msg("Can not open spec file for shornwrite");
-            exit(EXIT_FAILURE);
+            return -1;
         }
         read = getline(&line, &len, f_spec);
         config->shornwrite_portion = atof(line);
         fclose(f_spec);
     }
+    return 0;
+
 }
