@@ -6,7 +6,7 @@ LFLAGS = -L/home/bo/workspace/libfuse-fuse-3.9.1/build/lib -lfuse3
 default: fifaaFS
 
 
-fifaaFS:  fiffa.o log.o fault.o 
+fifaaFS:  fifaa.o log.o fault.o 
 	$(CC) $(CFLAGS) -o fifaaFS fiffa.o log.o fault.o
 
 fifaa.o:  fifaa.c params.h fault.h log.h
