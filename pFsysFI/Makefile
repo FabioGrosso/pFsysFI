@@ -7,7 +7,7 @@ default: fifaaFS
 
 
 fifaaFS:  fifaa.o log.o fault.o 
-	$(CC) $(CFLAGS) $(INCLUDES) $(LFLAGS) -o fifaaFS fifaa.o log.o fault.o
+	$(CC) $(CFLAGS) $(INCLUDES) -o fifaaFS fifaa.o log.o fault.o  $(LFLAGS)
 
 fifaa.o:  fifaa.c params.h fault.h log.h
 	$(CC) $(CFLAGS) $(INCLUDES) $(LFLAGS) -c fifaa.c
