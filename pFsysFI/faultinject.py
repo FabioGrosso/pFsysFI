@@ -30,7 +30,7 @@ def parse_log(logfile:str,yaml_loader) -> dict:
     with open(logfile) as f:
         lines = f.readlines()
         for line in lines:
-            if OP_PREFIX in line:
+            if FS_PREFIX in line:
                 if re.search(OP_MATCHING,line) != None:
                     items = line.split("(")
                     op = items[0]
