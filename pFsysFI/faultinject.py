@@ -177,7 +177,7 @@ def get_shornwrite_spec(fault_model_spec_loader):
 def write_fault_model_spec(fault_model,specs):
     with open(fault_model,'w') as f:
         for spec in specs:
-            f.write(spec)
+            f.write(str(spec))
             f.write("\n")
 
 yaml_loader = config_loader(CONFIG+YAML)
