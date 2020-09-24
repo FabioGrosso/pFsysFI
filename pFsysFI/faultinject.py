@@ -187,7 +187,7 @@ params = get_app_params(yaml_loader)
 execution = []
 execution.append(app)
 execution.extend(params)
-process = subprocess.Popen(execution, stdout=PIPE, stderr=PIPE)
+process = subprocess.Popen(execution, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 stdout, stderr = process.communicate()
 
 if os.path.isfile(FS_LOG) == False:
