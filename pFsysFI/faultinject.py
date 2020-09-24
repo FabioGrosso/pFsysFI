@@ -214,7 +214,7 @@ for i in range(num_trial):
 
     fault_ops = get_target_op(fault_model,fault_op_list)
     random.seed(datetime.now())
-    op = random.choise(fault_ops)
+    op = random.choice(fault_ops)
     instance = get_target_op(op,file_op)
     write_to_fuse(flag,fault_model,op,instance)
     if fault_model == 'bitflip':
