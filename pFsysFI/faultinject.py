@@ -213,7 +213,7 @@ fault_model_spec_loader = get_fault_model_spec(yaml_loader)
 for i in range(num_trial):
 
     fault_ops = get_target_op(fault_model,fault_op_list)
-    random.seed(datatime.now())
+    random.seed(datetime.now())
     op = random.choise(fault_ops)
     instance = get_target_op(op,file_op)
     write_to_fuse(flag,fault_model,op,instance)
