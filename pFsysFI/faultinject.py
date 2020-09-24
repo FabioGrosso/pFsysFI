@@ -39,7 +39,7 @@ def parse_log(logfile:str,yaml_loader) -> dict:
                     else:
                         file_op[op] = file_op[op] + 1
     
-   return file_op
+    return file_op
 
 def gen_yaml(op_list:dict,app:str):
 
