@@ -14,10 +14,10 @@ fifaa.o:  fifaa.c params.h fault.h log.h
 
 
 log.o:  log.h params.h log.c
-	$(CC) $(CFLAGS) $(INCLUDES) -c log.c
+	$(CC) $(CFLAGS) $(INCLUDES) $(LFLAGS) -c log.c
 
 fault.o:  fault.h params.h
-	$(CC) $(CFLAGS) $(INCLUDES) -c fault.c
+	$(CC) $(CFLAGS) $(INCLUDES) $(LFLAGS) -c fault.c
 
 
 clean: 
