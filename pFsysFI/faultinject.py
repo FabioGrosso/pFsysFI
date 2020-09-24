@@ -87,7 +87,7 @@ def get_faultmodel_op(fault_model,fault_op_loader)->list:
 
 def get_target_op(op,file_op)->int:
 
-    total = len(file_op[op])
+    total = file_op[op]
     random.seed(datetime.now())
     return random.randint(0,total-1)
 
@@ -129,13 +129,13 @@ def get_injection_trial(injection_loader)->int:
 
 def write_to_fuse(error_mode,fault_model,op_name,count):
     with open(FS_PREFIX+ERROR_FILE,'w') as f:
-        f.write(error_mode)
+        f.write(str(error_mode))
         f.write("\n")
-        f.write(fault_model)
+        f.write(str(fault_model))
         f.write("\n")
-        f.write(op_name)
+        f.write(str(op_name))
         f.write("\n")
-        f.write(count)
+        f.write(str(count))
         f.write("\n")
 
 def get_app(yaml_loader)->str:
