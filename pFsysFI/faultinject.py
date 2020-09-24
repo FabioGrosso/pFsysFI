@@ -18,7 +18,7 @@ ERROR_FILE = "_ficonfig"
 def config_loader(configfile:str):
     yaml_file = open(configfile)
     if yaml_file.closed:
-        logging.error("file is not open")
+        print("file is not open")
         raise ValueError
 
     parsed_yaml_loader = yaml.load(yaml_file, Loader=yaml.FullLoader)
@@ -51,7 +51,7 @@ def gen_yaml(op_list:dict,app:str):
 def config_loader(configfile:str):
     yaml_file = open(configfile)
     if yaml_file.closed:
-        logging.error("file is not open")
+        print("file is not open")
         raise ValueError
 
     parsed_yaml_loader = yaml.load(yaml_file, Loader=yaml.FullLoader)
@@ -75,13 +75,13 @@ def get_fault_op(fault_model,fault_op_loader)->list:
     
     if fault_model == "bitflip":
         if "bitflip" not in fault_op_loader:
-            logging.error("bitflip fault op not configured")
+            print("bitflip fault op not configured")
             raise ValueError
         return fault_op_loader['bitflip']
 
     if fault_model == "shornwrite":
         if "shornwrite" not in fault_op_loader:
-            logging.error("shornwrite fault op not configured")
+            print("shornwrite fault op not configured")
             raise ValueError
         return fault_op_loader['shornwrite']
 
@@ -95,37 +95,37 @@ def get_target_op(op,file_op)->int:
 def get_inject_model(yaml_loader):
 
     if 'injection' not in yaml_loader:
-        logging.error("injection section not configured")
+        print("injection section not configured")
         raise ValueError
     return yaml_loader['injection']
 
 def get_fault_op(yaml_loader):
 
     if 'fault_op' not in yaml_loader:
-        logging.error("fault op section not configured")
+        print("fault op section not configured")
         raise ValueError
     return yaml_loader['fault_op']
 
 def get_injection_flag(injection_loader)->int:
 
     if 'inject_flag' not in injection_loader:
-        logging.error("inject flag params not configured")
+        print("inject flag params not configured")
         raise ValueError
     return injection_loader['inject_flag']
 
 def get_fault_model(injection_loader)->str:
 
     if 'fault_model' not in injection_loader:
-        logging.error("fault model params not configured")
+        print("fault model params not configured")
         raise ValueError
     return injection_loader['fault_model']
 
 def get_injection_trial(injection_loader)->int:
 
-    if 'num_trial' not in injection_loader:
-        logging.error("num_trial params not configured")
+    if 'num_trials' not in injection_loader:
+        print("num_trial params not configured")
         raise ValueError
-    return injection_loader['num_trial']
+    return injection_loader['num_trials']
 
 def write_to_fuse(error_mode,fault_model,op_name,count):
     with open(FS_PREFIX+ERROR_FILE,'w') as f:
@@ -140,26 +140,26 @@ def write_to_fuse(error_mode,fault_model,op_name,count):
 
 def get_app(yaml_loader)->str:
     if "benchmark" not in yaml_loader:
-        logging.error("benchmark not configured")
+        print("benchmark not configured")
         raise ValueError
     return yaml_loader['benchmark']
 
 def get_app_params(yaml_loader)->list:
     if "parameters" not in yaml_loader:
-        logging.error("benchmark not configured")
+        print("benchmark not configured")
         raise ValueError
 
     return yaml_loader['parameters']
 
 def get_fault_model_spec(yaml_loader):
     if "fault_model_spec" not in yaml_loader:
-        logging.error("benchmark not configured")
+        print("benchmark not configured")
         raise ValueError
     return yaml_loader['fault_model_spec']
 
 def get_bitflip_spec(fault_model_spec_loader):
     if "bitflip" not in fault_model_spec_loader:
-        logging.error("bitflip spec not configured")
+        print("bitflip spec not configured")
         raise ValueError
     ret = []
     ret.append(fault_model_spec_loader['bitflip']['consecutive_bits'])
@@ -167,7 +167,7 @@ def get_bitflip_spec(fault_model_spec_loader):
 
 def get_shornwrite_spec(fault_model_spec_loader):
     if "shornwrite" not in fault_model_spec_loader:
-        logging.error("shornwrite spec not configured")
+        print("shornwrite spec not configured")
         raise ValueError
     ret = []
     ret.append(fault_model_spec_loader['shornwrite']['shorn_portion'])
