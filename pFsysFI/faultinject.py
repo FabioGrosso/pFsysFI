@@ -71,7 +71,7 @@ def random_op(call_ops:list)->str:
     random.seed(datetime.now())
     return random.choice(call_ops)
 
-def get_fault_op(fault_model,fault_op_loader)->list:
+def get_faultmodel_op(fault_model,fault_op_loader)->list:
     
     if fault_model == "bitflip":
         if "bitflip" not in fault_op_loader:
@@ -212,7 +212,7 @@ fault_model_spec_loader = get_fault_model_spec(yaml_loader)
 # 
 for i in range(num_trial):
 
-    fault_ops = get_target_op(fault_model,fault_op_list)
+    fault_ops = get_faultmodel_op(fault_model,fault_op_list)
     random.seed(datetime.now())
     op = random.choice(fault_ops)
     instance = get_target_op(op,file_op)
