@@ -88,7 +88,7 @@ def get_fault_op(fault_model,fault_op_loader)->list:
 def get_target_op(op,file_op)->int:
 
     total = file_op[op]
-    random.seed(datatime.now())
+    random.seed(datetime.now())
     return random.randint(0,total-1)
 
 
