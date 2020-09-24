@@ -376,7 +376,7 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
    
     if(config.is_inject == 1){
         if (strcmp("fiffa_write",config.op_name) == 0){
-            if (write_counter == config->instance){
+            if (write_counter == config.instance){
                 inject(config,inject_buf,size);
             }
         }
