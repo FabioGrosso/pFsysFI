@@ -166,7 +166,7 @@ def get_bitflip_spec(fault_model_spec_loader):
     return ret
 
 def get_shornwrite_spec(fault_model_spec_loader):
-     if "shornwrite" not in fault_model_spec_loader:
+    if "shornwrite" not in fault_model_spec_loader:
         logging.error("shornwrite spec not configured")
         raise ValueError
     ret = []
