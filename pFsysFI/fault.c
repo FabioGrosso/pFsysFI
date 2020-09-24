@@ -47,7 +47,7 @@ int load_config(Config *config){
     ssize_t read;
     FILE *fp = fopen(CONFIG_FILE,"r");
     FILE *f_spec = NULL;
-    if (f == NULL){
+    if (fp == NULL){
         log_msg("Can not open config file for FIFAA");
         return -1;
     }
@@ -66,8 +66,8 @@ int load_config(Config *config){
     config->instance  = atoi(line);
     fclose(fp);
     // need to read the spec file 
-    if (strcmp("bitflip",config.model_name) == 0){
-        f_spec = fopen(config.model_name,"r");
+    if (strcmp("bitflip",config->model_name) == 0){
+        f_spec = fopen(config->model_name,"r");
         if (f_spec == NULL){
             log_msg("Can not open spec file for bitflip");
             return -1;
@@ -76,8 +76,8 @@ int load_config(Config *config){
         config->consecutive_bits = atoi(line);
         fclose(f_spec);
     }
-    if (strcmp("shornwrite", config.model_name) == 0){
-        f_spec = fopen(config.model_name,"r");
+    if (strcmp("shornwrite", config->model_name) == 0){
+        f_spec = fopen(config->model_name,"r");
         if (f_spec == NULL){
             log_msg("Can not open spec file for shornwrite");
             return -1;

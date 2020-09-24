@@ -24,6 +24,6 @@ void inject(Config config, void *buf, size_t size);
 char* parepare_bitflip(void * buf, size_t size);
 void bit_flip(char *data, int num_bits);
 
-void load_config(Config *config);
+int load_config(Config *config);
 
 #endif
