@@ -295,7 +295,8 @@ for i in range(num_trial):
     # run app
     execution = []
     execution.append(app)
-    execution.extend(params)
+    if params != None:
+        execution.extend(params)
     [stdout,stderr] = run_command(execution)
     # post-process injection results
     os.mkdir(str(i))
