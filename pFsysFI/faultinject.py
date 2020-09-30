@@ -211,7 +211,7 @@ def run_command(params):
     stdout, stderr = process.communicate()
     print("running command with the following message")
     stdout = stdout.decode("utf-8")
-    stderr = stderr.decide("utf-8")
+    stderr = stderr.decode("utf-8")
     for line in stdout:
         print(line)
     for line in stderr:
