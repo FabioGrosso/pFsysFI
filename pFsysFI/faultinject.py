@@ -209,10 +209,9 @@ def write_fault_model_spec(fault_model,specs):
 def run_command(params):
     process = subprocess.Popen(execution, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stdout, stderr = process.communicate()
-    if stderr != "":
-        print("running command failed")
-        print(stderr)
-        raise ValueError
+    print("running command with the following message")
+    print(stdout)
+    print(stderr)
     return [stdout,stderr]
 
 yaml_loader = config_loader(CONFIG+YAML)
