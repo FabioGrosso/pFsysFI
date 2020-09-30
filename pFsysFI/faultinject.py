@@ -303,10 +303,10 @@ for i in range(num_trial):
     # save generted application result file /stdout to this directory, e.g
     path = os.path.join(str(i),"stdout")
     with open(path,"w") as f:
-        f.write(stdout)
+        f.write(str(stdout))
     path = os.path.join(str(i),"stderr")
     with open(path,"w") as f:
-        f.write(stderr)
+        f.write(str(stderr))
     # unmount fuse
     execution = []
     execution.append(FUSECOMMAND)
