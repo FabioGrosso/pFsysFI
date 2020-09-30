@@ -121,16 +121,16 @@ def get_fuse_mountpoint(fuse_loader):
     return fuse_loader['mount']
 
 def get_fuse_root(fuse_loader):
-    if 'root' not in yaml_loader:
+    if 'root' not in fuse_loader:
         print("root not configured")
         raise ValueError
     return fuse_loader['root']
 
 def get_fuse_execute(fuse_loader):
-    if 'root' not in yaml_loader:
-        print("root not configured")
+    if 'fuseFS' not in fuse_loader:
+        print("fuseFS not configured")
         raise ValueError
-    return fuse_loader['root']
+    return fuse_loader['fuseFS']
 
 def get_injection_flag(injection_loader)->int:
 
