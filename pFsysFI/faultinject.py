@@ -212,10 +212,8 @@ def run_command(params):
     print("running command with the following message")
     stdout = stdout.decode("utf-8")
     stderr = stderr.decode("utf-8")
-    for line in stdout:
-        print(line)
-    for line in stderr:
-        print(line)
+    print(stdout)
+    print(stderr)
     return [stdout,stderr]
 
 yaml_loader = config_loader(CONFIG+YAML)
@@ -307,12 +305,10 @@ for i in range(num_trial):
     # save generted application result file /stdout to this directory, e.g
     path = os.path.join(str(i),"stdout")
     with open(path,"w") as f:
-        for line in stdout:
-            f.write(str(line))
+        f.write(stdout)
     path = os.path.join(str(i),"stderr")
     with open(path,"w") as f:
-        for line in stderr:
-            f.write(str(line))
+        f.write(stderr)
     # unmount fuse
     execution = []
     execution.append(FUSECOMMAND)
