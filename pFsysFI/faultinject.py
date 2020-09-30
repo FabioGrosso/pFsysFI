@@ -209,8 +209,9 @@ def write_fault_model_spec(fault_model,specs):
 def run_command(params):
     process = subprocess.Popen(execution, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stdout, stderr = process.communicate()
-    if len(stderr) != 0:
-        print("unmont fuse failed")
+    if stderr != "":
+        print("running command failed")
+        print(stderr)
         raise ValueError
     return [stdout,stderr]
 
