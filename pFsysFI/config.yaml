@@ -20,10 +20,10 @@ injection:
 
 fault_op:
   bitflip:
-    - fiffa_write
+    - fifaa_write
 
   shornwrite:
-    - fiffa_write
+    - fifaa_write
 
 fault_model_spec:
   bitflip:
