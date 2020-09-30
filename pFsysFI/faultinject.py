@@ -215,6 +215,21 @@ def run_command(params):
     return [stdout,stderr]
 
 
+fuse_loader = get_fuse_config(yaml_loader)
+
+fuse_execute = get_fuse_execute(fuse_loader)
+
+fuse_root = get_fuse_root(fuse_loader)
+
+fuse_mount = get_fuse_mountpoint(fuse_loader)
+
+#we assume there is no fuse mounted
+
+execution = []
+execution.append(fuse_execute)
+execution.append(fuse_root)
+execution.append(fuse_mount)
+run_command(execution)
 
 yaml_loader = config_loader(CONFIG+YAML)
 app = get_app(yaml_loader)
@@ -230,13 +245,7 @@ if os.path.isfile(FS_LOG) == False:
     print("NO FS LOG FILE FOUND")
     raise ValueError
 
-fuse_loader = get_fuse_config(yaml_loader)
 
-fuse_execute = get_fuse_execute(fuse_loader)
-
-fuse_root = get_fuse_root(fuse_loader)
-
-fuse_mount = get_fuse_mountpoint(fuse_loader)
 
 execution = []
 
