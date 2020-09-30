@@ -214,6 +214,9 @@ def run_command(params):
         raise ValueError
     return [stdout,stderr]
 
+yaml_loader = config_loader(CONFIG+YAML)
+app = get_app(yaml_loader)
+params = get_app_params(yaml_loader)
 
 fuse_loader = get_fuse_config(yaml_loader)
 
@@ -231,9 +234,7 @@ execution.append(fuse_root)
 execution.append(fuse_mount)
 run_command(execution)
 
-yaml_loader = config_loader(CONFIG+YAML)
-app = get_app(yaml_loader)
-params = get_app_params(yaml_loader)
+
 # run profiling to get the fiffa log
 execution = []
 execution.append(app)
