@@ -210,8 +210,10 @@ def run_command(params):
     process = subprocess.Popen(execution, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stdout, stderr = process.communicate()
     print("running command with the following message")
-    print(stdout)
-    print(stderr)
+    for line in stdout:
+        print(line)
+    for line in stderr:
+        print(line)
     return [stdout,stderr]
 
 yaml_loader = config_loader(CONFIG+YAML)
@@ -303,10 +305,12 @@ for i in range(num_trial):
     # save generted application result file /stdout to this directory, e.g
     path = os.path.join(str(i),"stdout")
     with open(path,"w") as f:
-        f.write(str(stdout))
+        for line in stdout:
+            f.write(str(line))
     path = os.path.join(str(i),"stderr")
     with open(path,"w") as f:
-        f.write(str(stderr))
+        for line in stderr:
+            f.write(str(line))
     # unmount fuse
     execution = []
     execution.append(FUSECOMMAND)
