@@ -13,7 +13,7 @@ FS_PREFIX = "fifaa"
 OP_MATCHING = FS_PREFIX+"_"+r'.*\(.*?\)'
 FS_LOG = FS_PREFIX+".log"
 ERROR_FILE = "_ficonfig"
-FUSECOMMAND = "fusemount3"
+FUSECOMMAND = "fusermount3"
 
 
 def config_loader(configfile:str):
