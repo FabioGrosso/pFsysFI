@@ -210,6 +210,8 @@ def run_command(params):
     process = subprocess.Popen(execution, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stdout, stderr = process.communicate()
     print("running command with the following message")
+    stdout = stdout.decode("utf-8")
+    stderr = stderr.decide("utf-8")
     for line in stdout:
         print(line)
     for line in stderr:
