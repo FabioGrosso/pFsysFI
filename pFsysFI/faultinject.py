@@ -222,7 +222,8 @@ params = get_app_params(yaml_loader)
 # run profiling to get the fiffa log
 execution = []
 execution.append(app)
-execution.extend(params)
+if params != None:
+    execution.extend(params)
 run_command(execution)
 
 if os.path.isfile(FS_LOG) == False:
