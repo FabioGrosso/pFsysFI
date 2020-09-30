@@ -13,6 +13,7 @@ FS_PREFIX = "fifaa"
 OP_MATCHING = FS_PREFIX+"_"+r'.*\(.*?\)'
 FS_LOG = FS_PREFIX+".log"
 ERROR_FILE = "_ficonfig"
+FUSECOMMAND = "fusemount"
 
 
 def config_loader(configfile:str):
@@ -106,6 +107,31 @@ def get_fault_op(yaml_loader):
         raise ValueError
     return yaml_loader['fault_op']
 
+def get_fuse_config(yaml_loader):
+
+    if 'fuse' not in yaml_loader:
+        print("fault op section not configured")
+        raise ValueError
+    return yaml_loader['fuse']
+
+def get_fuse_mountpoint(fuse_loader):
+    if 'mount' not in fuse_loader:
+        print("fuse mount point not configured")
+        raise ValueError
+    return fuse_loader['mount']
+
+def get_fuse_root(fuse_loader):
+    if 'root' not in yaml_loader:
+        print("root not configured")
+        raise ValueError
+    return fuse_loader['root']
+
+def get_fuse_execute(fuse_loader):
+    if 'root' not in yaml_loader:
+        print("root not configured")
+        raise ValueError
+    return fuse_loader['root']
+
 def get_injection_flag(injection_loader)->int:
 
     if 'inject_flag' not in injection_loader:
@@ -180,6 +206,16 @@ def write_fault_model_spec(fault_model,specs):
             f.write(str(spec))
             f.write("\n")
 
+def run_command(params):
+    process = subprocess.Popen(execution, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    stdout, stderr = process.communicate()
+    if len(stderr) != 0:
+        print("unmont fuse failed")
+        raise ValueError
+    return [stdout,stderr]
+
+
+
 yaml_loader = config_loader(CONFIG+YAML)
 app = get_app(yaml_loader)
 params = get_app_params(yaml_loader)
@@ -187,12 +223,28 @@ params = get_app_params(yaml_loader)
 execution = []
 execution.append(app)
 execution.extend(params)
-process = subprocess.Popen(execution, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-stdout, stderr = process.communicate()
+run_command(execution)
 
 if os.path.isfile(FS_LOG) == False:
     print("NO FS LOG FILE FOUND")
     raise ValueError
+
+fuse_loader = get_fuse_config(yaml_loader)
+
+fuse_execute = get_fuse_execute(fuse_loader)
+
+fuse_root = get_fuse_root(fuse_loader)
+
+fuse_mount = get_fuse_mountpoint(fuse_loader)
+
+execution = []
+
+execution.append(FUSECOMMAND)
+execution.append('-u')
+execution.append(fuse_mount)
+
+# unmount the fuse
+run_command(execution)
 
 file_op = parse_log(FS_LOG,yaml_loader)
 
@@ -223,6 +275,30 @@ for i in range(num_trial):
     if fault_model == 'shornwrite':
         specs = get_shornwrite_spec(fault_model_spec_loader)
         write_fault_model_spec(fault_model,specs)
-    
+    # launch fuse
+    execution = []
+    execution.append(fuse_execute)
+    execution.append(fuse_root)
+    execution.append(fuse_mount)
+    run_command(execution)
+    # run app
+    execution = []
+    execution.append(app)
+    execution.extend(params)
+    [stdout,stderr] = run_command(execution)
+    # post-process injection results
+    os.mkdir(str(i))
+    # save generted application result file /stdout to this directory, e.g
+    path = os.path.join(str(i),"stdout")
+    with open(path,"w") as f:
+        f.write(stdout)
+    path = os.path.join(str(i),"stderr")
+    with open(path,"w") as f:
+        f.write(stderr)
+    # unmount fuse
+    execution = []
+    execution.append(FUSECOMMAND)
+    execution.append('-u')
+    execution.append(fuse_mount)
 
 

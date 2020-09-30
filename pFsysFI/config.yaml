@@ -1,5 +1,10 @@
 logfile: "fifaa.config"
 
+fuse:
+  mount: "./fuse_mount"
+  root: "./fuse_root"
+  fuseFS: "./pFsysFI/pFsysFI/fifaaFS"
+
 benchmark: "x"
 
 parameters:
