@@ -315,5 +315,6 @@ for i in range(num_trial):
     execution.append('-u')
     execution.append(fuse_mount)
     run_command(execution)
+    sleep(2)
 
 
