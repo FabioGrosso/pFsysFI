@@ -22,12 +22,15 @@ fault_op:
   bitflip:
     - fifaa_write
 
-  shornwrite:
-    - fifaa_write
+  #shornwrite:
+  #  - fifaa_write
+
+  #dropwrite:
+  #  - fifaa_write
 
 fault_model_spec:
   bitflip:
     consecutive_bits: 2
 
-  shornwrite:
-    shorn_portion: 0.1
+  #shornwrite:
+  #  shorn_portion: 0.1

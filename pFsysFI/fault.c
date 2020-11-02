@@ -7,22 +7,42 @@
 
 #define CONFIG_FILE "fiffa.config"
 
-void inject(Config config, void *buf, size_t size){
+#define SHORNWRITE_THRES 512
+
+int inject(Config config, void *buf, size_t size){
     if (strcmp("bitflip",config.model_name) == 0){
-        char * data = parepare_bitflip(buf,size);
+        char * data = prepare_bitflip(buf,size);
         bit_flip(data,config.consecutive_bits);
+        return size;
     }
     if (strcmp("shornwrite", config.model_name) == 0){
-
+        size_t new_size = prepare_shornwrite(buf,size,config.shornwrite_portion);
+        log_msg("shornwrite: %d ",new_size);
+        return new_size;
+    }
+     if (strcmp("dropwrite", config.model_name) == 0){
+         log_msg("dropwrite: 0");
+        return 0;
     }
 }
 
 
-char* parepare_bitflip(void * buf, size_t size){
+char* prepare_bitflip(void * buf, size_t size){
     char * buf_char = (char *)(buf);
     int inject_index = generate_random(size);
     char *data = &buf_char[inject_index];
     return data;
+}
+
+int prepare_shornwrite(void *buf, size_t size, float shorn_portion){
+    char *buf_char = (char *)(buf);
+    if (size < SHORNWRITE_THRES){
+       return size;
+    }
+    else{
+        size = (int)(size*shorn_portion);
+        return size;
+    }
 }
 
 int generate_random(size_t size){

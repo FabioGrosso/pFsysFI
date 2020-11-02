@@ -368,6 +368,7 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
     log_fi(fi);
 
     char inject_buf[size];
+    size_t new_size = size;
 
     memset(inject_buf,0,size);
     log_msg("create tmp buf is fine");
@@ -377,13 +378,13 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
     if(config.is_inject == 1){
         if (strcmp("fiffa_write",config.op_name) == 0){
             if (write_counter == config.instance){
-                inject(config,inject_buf,size);
+                new_size = inject(config,inject_buf,size);
             }
         }
     }
 
 
-    return log_syscall("pwrite", pwrite(fi->fh, inject_buf, size, offset), 0);
+    return log_syscall("pwrite", pwrite(fi->fh, inject_buf, new_size, offset), 0);
 }
 
 /** Get file system statistics
