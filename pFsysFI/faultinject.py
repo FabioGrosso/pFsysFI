@@ -156,7 +156,7 @@ def get_injection_trial(injection_loader)->int:
     return injection_loader['num_trials']
 
 def write_to_fuse(error_mode,fault_model,op_name,count):
-        f = open(FS_PREFIX+ERROR_FILE,'w',buffering=0)
+        f = open(FS_PREFIX+ERROR_FILE,'w',buffering=1)
         f.write(str(error_mode))
         f.write("\n")
         f.write(str(fault_model))
@@ -211,7 +211,7 @@ def get_shornwrite_spec(fault_model_spec_loader):
 
 
 def write_fault_model_spec(fault_model,specs):
-    f = open(fault_model,'w', buffering = 0)
+    f = open(fault_model,'w', buffering = 1)
     for spec in specs:
         f.write(str(spec))
         f.write("\n")
