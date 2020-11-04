@@ -63,7 +63,7 @@ void bit_flip(char *data, int num_bits){
 }
 
 int load_config(Config *config){
-    char *line = NULL;
+    char *line[4]  = {0};
     size_t len = 0;
     ssize_t read;
     FILE *fp = fopen(CONFIG_FILE,"r");
@@ -75,24 +75,24 @@ int load_config(Config *config){
     }
     // read line by line
     // 1. error mode
-    read = getline(&line, &len, fp);
-    line[strlen(line)-1] = '\0';
-    config->is_inject = atoi(line);
+    read = getline(&line[0], &len, fp);
+    line[0][strlen(line[0])-1] = '\0';
+    config->is_inject = atoi(line[0]);
     log_msg("%d\n",config->is_inject);
     // 2. fault model
-    read = getline(&line, &len, fp);
-    config->model_name = line;
-    line[strlen(line)-1] = '\0';
+    read = getline(&line[1], &len, fp);
+    config->model_name = line[1];
+    line[1][strlen(line[1])-1] = '\0';
     log_msg("%s\n",config->model_name);
     // 3. op name
-    read = getline(&line, &len, fp);
-    config->op_name  = line;
-    line[strlen(line)-1] = '\0';
+    read = getline(&line[2], &len, fp);
+    config->op_name  = line[2];
+    line[2][strlen(line[2])-1] = '\0';
     log_msg("%s\n",config->op_name);
     // 4. instance
-    read = getline(&line, &len, fp);
-    line[strlen(line)-1] = '\0';
-    config->instance  = atoi(line);
+    read = getline(&line[3], &len, fp);
+    line[3][strlen(line[3])-1] = '\0';
+    config->instance  = atoi(line[3]);
     log_msg("%d\n",config->instance);
     fclose(fp);
     // need to read the spec file 
