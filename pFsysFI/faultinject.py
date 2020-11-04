@@ -156,7 +156,7 @@ def get_injection_trial(injection_loader)->int:
     return injection_loader['num_trials']
 
 def write_to_fuse(error_mode,fault_model,op_name,count):
-    with open(FS_PREFIX+ERROR_FILE,'w') as f:
+        f = open(FS_PREFIX+ERROR_FILE,'w')
         f.write(str(error_mode))
         f.write("\n")
         f.write(str(fault_model))
@@ -165,6 +165,7 @@ def write_to_fuse(error_mode,fault_model,op_name,count):
         f.write("\n")
         f.write(str(count))
         f.write("\n")
+        f.close()
 
 def get_app(yaml_loader)->str:
     if "benchmark" not in yaml_loader:
