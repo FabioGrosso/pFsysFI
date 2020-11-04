@@ -211,7 +211,7 @@ def get_shornwrite_spec(fault_model_spec_loader):
 
 
 def write_fault_model_spec(fault_model,specs):
-    f = open(fault_model,'w', buffering = 0):
+    f = open(fault_model,'w', buffering = 0)
     for spec in specs:
         f.write(str(spec))
         f.write("\n")
