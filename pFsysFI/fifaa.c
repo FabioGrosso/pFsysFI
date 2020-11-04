@@ -377,7 +377,7 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
    
     if(config.is_inject == 1){
          log_msg("about to inject\n");
-        if (strcmp("fifaa_write",config.op_name) == 0){
+        if (strcmp("fifaa_write\0",config.op_name) == 0){
              log_msg("verify the fwrite\n");
             if (write_counter == config.instance){
                  log_msg("hit the function\n");
