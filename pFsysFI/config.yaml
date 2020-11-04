@@ -5,18 +5,19 @@ fuse:
   root: "./fuse_root"
   fuseFS: "./pFsysFI/pFsysFI/fifaaFS"
 
-benchmark: "x"
+benchmark: "./fuse_mount/x"
 
 parameters:
-  - "-i input"
-  - "-o output"
+  #- "-i input"
+  #- "-o output"
+written_file: "./fuse_mount/data.txt"
 
 injection:
   # we now support multiple injection types:
   # shornwrite, bitflip, dorppedwrite
-  inject_flag: 0
+  inject_flag: 1
   fault_model: "bitflip" 
-  num_trials: 100
+  num_trials: 2
 
 fault_op:
   bitflip:

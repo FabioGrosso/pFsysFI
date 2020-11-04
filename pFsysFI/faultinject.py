@@ -1,4 +1,5 @@
 import os
+import shutil
 import sys
 import re
 import yaml
@@ -171,6 +172,12 @@ def get_app(yaml_loader)->str:
         raise ValueError
     return yaml_loader['benchmark']
 
+def get_app_file(yaml_loader)->str:
+    if "written_file" not in yaml_loader:
+        print("written_file not configured")
+        raise ValueError
+    return yaml_loader['written_file']
+
 def get_app_params(yaml_loader)->list:
     if "parameters" not in yaml_loader:
         print("benchmark not configured")
@@ -220,6 +227,7 @@ def run_command(params):
 yaml_loader = config_loader(CONFIG+YAML)
 app = get_app(yaml_loader)
 params = get_app_params(yaml_loader)
+app_file = get_app_file(yaml_loader)
 
 fuse_loader = get_fuse_config(yaml_loader)
 
@@ -311,6 +319,7 @@ for i in range(num_trial):
     path = os.path.join(str(i),"stderr")
     with open(path,"w") as f:
         f.write(stderr)
+    shutil.copy2(app_file,str(i))    
     # unmount fuse
     execution = []
     execution.append(FUSECOMMAND)
