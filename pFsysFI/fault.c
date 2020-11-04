@@ -4,6 +4,7 @@
 #include <string.h>
 #include "log.h"
 #include "fault.h"
+#include <errno.h>
 
 #define CONFIG_FILE "fifaaficonfig"
 
@@ -69,6 +70,7 @@ int load_config(Config *config){
     FILE *f_spec = NULL;
     if (fp == NULL){
         log_msg("Can not open config file for FIFAA");
+        log_msg("fopen failed, errno = %d\n", errno);
         return -1;
     }
     // read line by line
