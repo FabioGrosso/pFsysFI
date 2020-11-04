@@ -14,7 +14,7 @@ CONFIG = "config"
 FS_PREFIX = "fifaa"
 OP_MATCHING = FS_PREFIX+"_"+r'.*\(.*?\)'
 FS_LOG = FS_PREFIX+".log"
-ERROR_FILE = "_ficonfig"
+ERROR_FILE = "ficonfig"
 FUSECOMMAND = "fusermount3"
 
 

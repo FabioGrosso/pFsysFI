@@ -5,7 +5,7 @@
 #include "log.h"
 #include "fault.h"
 
-#define CONFIG_FILE "fifaa_ficonfig"
+#define CONFIG_FILE "fifaaficonfig"
 
 #define SHORNWRITE_THRES 512
 
