@@ -8,7 +8,7 @@
 
 #define CONFIG_FILE "/home/bo/workspace/fifaaficonfig"
 #define CONFIG_BITFLIP_FILE "/home/bo/workspace/bitflip"
-#define CONFIG_SHORNWRITE_FILE "/home/bo/workspace/bitflip"
+#define CONFIG_SHORNWRITE_FILE "/home/bo/workspace/shornwrite"
 
 #define SHORNWRITE_THRES 512
 
