@@ -7,6 +7,8 @@
 #include <errno.h>
 
 #define CONFIG_FILE "/home/bo/workspace/fifaaficonfig"
+#define CONFIG_BITFLIP_FILE "/home/bo/workspace/bitflip"
+#define CONFIG_SHORNWRITE_FILE "/home/bo/workspace/bitflip"
 
 #define SHORNWRITE_THRES 512
 
@@ -63,7 +65,7 @@ void bit_flip(char *data, int num_bits){
 }
 
 int load_config(Config *config){
-    char *line[4]  = {0};
+    char *line[5]  = {0};
     size_t len = 0;
     ssize_t read;
     FILE *fp = fopen(CONFIG_FILE,"r");
@@ -97,14 +99,14 @@ int load_config(Config *config){
     fclose(fp);
     // need to read the spec file 
     if (strcmp("bitflip\0",config->model_name) == 0){
-        f_spec = fopen(config->model_name,"r");
+        f_spec = fopen(CONFIG_BITFLIP_FILE,"r");
         if (f_spec == NULL){
             log_msg("Can not open spec file for bitflip");
             return -1;
         }
         log_msg("get into consecutive_bits file");
-        read = getline(&line, &len, f_spec);
-        config->consecutive_bits = atoi(line);
+        read = getline(&line[4], &len, f_spec);
+        config->consecutive_bits = atoi(line[4]);
         fclose(f_spec);
     }
     if (strcmp("shornwrite\0", config->model_name) == 0){
@@ -113,8 +115,8 @@ int load_config(Config *config){
             log_msg("Can not open spec file for shornwrite");
             return -1;
         }
-        read = getline(&line, &len, f_spec);
-        config->shornwrite_portion = atof(line);
+        read = getline(&line[4], &len, f_spec);
+        config->shornwrite_portion = atof(line[4]);
         fclose(f_spec);
     }
     return 0;
