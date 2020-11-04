@@ -59,7 +59,7 @@ static void fifaa_fullpath(char fpath[PATH_MAX], const char *path)
 }
 
 static Config config;
-static int write_counter = 0;
+static int write_counter = -1;
 
 
 ///////////////////////////////////////////////////////////
