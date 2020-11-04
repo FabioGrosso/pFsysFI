@@ -6,7 +6,7 @@
 #include "fault.h"
 #include <errno.h>
 
-#define CONFIG_FILE "fifaaficonfig"
+#define CONFIG_FILE "./fifaaficonfig"
 
 #define SHORNWRITE_THRES 512
 
