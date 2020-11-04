@@ -75,15 +75,19 @@ int load_config(Config *config){
     // 1. error mode
     read = getline(&line, &len, fp);
     config->is_inject = atoi(line);
+    log_msg("%d\n",config->is_inject);
     // 2. fault model
     read = getline(&line, &len, fp);
     config->model_name = line;
+    log_msg("%s\n",config->model_name);
     // 3. op name
     read = getline(&line, &len, fp);
     config->op_name  = line;
+    log_msg("%s\n",config->op_name);
     // 4. instance
     read = getline(&line, &len, fp);
     config->instance  = atoi(line);
+    log_msg("%d\n",config->instance);
     fclose(fp);
     // need to read the spec file 
     if (strcmp("bitflip",config->model_name) == 0){
