@@ -76,18 +76,22 @@ int load_config(Config *config){
     // read line by line
     // 1. error mode
     read = getline(&line, &len, fp);
+    line[strlen(line)-1] = 0;
     config->is_inject = atoi(line);
     log_msg("%d\n",config->is_inject);
     // 2. fault model
     read = getline(&line, &len, fp);
     config->model_name = line;
+    line[strlen(line)-1] = 0;
     log_msg("%s\n",config->model_name);
     // 3. op name
     read = getline(&line, &len, fp);
     config->op_name  = line;
+    line[strlen(line)-1] = 0;
     log_msg("%s\n",config->op_name);
     // 4. instance
     read = getline(&line, &len, fp);
+    line[strlen(line)-1] = 0;
     config->instance  = atoi(line);
     log_msg("%d\n",config->instance);
     fclose(fp);
