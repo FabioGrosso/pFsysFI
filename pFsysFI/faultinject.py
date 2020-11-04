@@ -156,7 +156,7 @@ def get_injection_trial(injection_loader)->int:
     return injection_loader['num_trials']
 
 def write_to_fuse(error_mode,fault_model,op_name,count):
-        f = open(FS_PREFIX+ERROR_FILE,'w')
+        f = open(FS_PREFIX+ERROR_FILE,'w',buffering=0)
         f.write(str(error_mode))
         f.write("\n")
         f.write(str(fault_model))
@@ -165,6 +165,7 @@ def write_to_fuse(error_mode,fault_model,op_name,count):
         f.write("\n")
         f.write(str(count))
         f.write("\n")
+        f.flush()
         f.close()
 
 def get_app(yaml_loader)->str:
@@ -210,10 +211,11 @@ def get_shornwrite_spec(fault_model_spec_loader):
 
 
 def write_fault_model_spec(fault_model,specs):
-    with open(fault_model,'w') as f:
-        for spec in specs:
-            f.write(str(spec))
-            f.write("\n")
+    f = open(fault_model,'w', buffering = 0):
+    for spec in specs:
+        f.write(str(spec))
+        f.write("\n")
+    f.close()
 
 def run_command(params):
     process = subprocess.Popen(execution, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -299,6 +301,7 @@ for i in range(num_trial):
         specs = get_shornwrite_spec(fault_model_spec_loader)
         write_fault_model_spec(fault_model,specs)
     # launch fuse
+    time.sleep(1)
     execution = []
     execution.append(fuse_execute)
     execution.append(fuse_root)
