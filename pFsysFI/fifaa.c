@@ -371,12 +371,12 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
     size_t new_size = size;
 
     memset(inject_buf,0,size);
-    log_msg("create tmp buf is fine");
+    log_msg("create tmp buf is fine\n");
     memcpy(inject_buf,buf,size);
-    log_msg("copy to tmp buf is fine");
+    log_msg("copy to tmp buf is fine\n");
    
     if(config.is_inject == 1){
-        if (strcmp("fiffa_write",config.op_name) == 0){
+        if (strcmp("fifaa_write",config.op_name) == 0){
             if (write_counter == config.instance){
                 new_size = inject(config,inject_buf,size);
             }
