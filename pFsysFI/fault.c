@@ -102,6 +102,7 @@ int load_config(Config *config){
             log_msg("Can not open spec file for bitflip");
             return -1;
         }
+        log_msg("get into consecutive_bits file");
         read = getline(&line, &len, f_spec);
         config->consecutive_bits = atoi(line);
         fclose(f_spec);

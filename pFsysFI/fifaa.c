@@ -376,8 +376,11 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
     log_msg("copy to tmp buf is fine\n");
    
     if(config.is_inject == 1){
+         log_msg("about to inject\n");
         if (strcmp("fifaa_write",config.op_name) == 0){
+             log_msg("verify the fwrite\n");
             if (write_counter == config.instance){
+                 log_msg("hit the function\n");
                 new_size = inject(config,inject_buf,size);
             }
         }
