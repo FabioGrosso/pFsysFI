@@ -360,7 +360,7 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
 {
     write_counter ++;
     int retstat = 0;
-    
+    char fname[] = "fifaa_write";
     log_msg("\nfifaa_write(path=\"%s\", buf=0x%08x, size=%d, offset=%lld, fi=0x%08x)\n",
         path, buf, size, offset, fi
         );
@@ -377,7 +377,7 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
    
     if(config.is_inject == 1){
          log_msg("about to inject\n");
-        if (strcmp("fifaa_write\0",config.op_name) == 0){
+        if (strcmp(fname,config.op_name) == 0){
              log_msg("verify the fwrite\n");
             if (write_counter == config.instance){
                  log_msg("hit the function\n");
