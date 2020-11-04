@@ -5,6 +5,7 @@ import yaml
 import subprocess
 import random
 from datetime import datetime
+import time
 
 # get the benchmark xml for the profiling data
 YAML = ".yaml"
@@ -235,7 +236,7 @@ execution.append(fuse_execute)
 execution.append(fuse_root)
 execution.append(fuse_mount)
 run_command(execution)
-sleep(1)
+time.sleep(1)
 
 # run profiling to get the fiffa log
 execution = []
@@ -255,7 +256,7 @@ execution = []
 execution.append(FUSECOMMAND)
 execution.append('-u')
 execution.append(fuse_mount)
-sleep(1)
+time.sleep(1)
 # unmount the fuse
 run_command(execution)
 
@@ -294,7 +295,7 @@ for i in range(num_trial):
     execution.append(fuse_root)
     execution.append(fuse_mount)
     run_command(execution)
-    sleep(1)
+    time.sleep(1)
     # run app
     execution = []
     execution.append(app)
@@ -316,6 +317,6 @@ for i in range(num_trial):
     execution.append('-u')
     execution.append(fuse_mount)
     run_command(execution)
-    sleep(1)
+    time.sleep(1)
 
 
