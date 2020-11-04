@@ -69,6 +69,7 @@ int load_config(Config *config){
     FILE *f_spec = NULL;
     if (fp == NULL){
         log_msg("Can not open config file for FIFAA");
+        perror("Error ");
         return -1;
     }
     // read line by line
