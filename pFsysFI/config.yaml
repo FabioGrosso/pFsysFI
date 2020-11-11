@@ -11,6 +11,7 @@ parameters:
   #- "-i input"
   #- "-o output"
 written_file: "./fuse_mount/data.txt"
+log_file : "/home/daoce/Downloads/fifaa.log"
 
 injection:
   # we now support multiple injection types:
