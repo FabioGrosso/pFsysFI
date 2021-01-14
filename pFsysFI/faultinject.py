@@ -174,6 +174,12 @@ def get_app(yaml_loader)->str:
         raise ValueError
     return yaml_loader['benchmark']
 
+def get_log_file(yaml_loader)->str:
+    if "log_file" not in yaml_loader:
+        print("log_file not configured")
+        raise ValueError
+    return yaml_loader['log_file']
+
 def get_app_file(yaml_loader)->str:
     if "written_file" not in yaml_loader:
         print("written_file not configured")
@@ -231,6 +237,7 @@ yaml_loader = config_loader(CONFIG+YAML)
 app = get_app(yaml_loader)
 params = get_app_params(yaml_loader)
 app_file = get_app_file(yaml_loader)
+log_file = get_log_file(yaml_loader)
 
 fuse_loader = get_fuse_config(yaml_loader)
 
@@ -323,7 +330,8 @@ for i in range(num_trial):
     path = os.path.join(str(i),"stderr")
     with open(path,"w") as f:
         f.write(stderr)
-    shutil.copy2(app_file,str(i))    
+    shutil.copy2(app_file,str(i))
+    shutil.copy2(log_file,str(i))
     # unmount fuse
     execution = []
     execution.append(FUSECOMMAND)
