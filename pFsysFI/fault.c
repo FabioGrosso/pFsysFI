@@ -5,10 +5,10 @@
 #include "log.h"
 #include "fault.h"
 #include <errno.h>
-
+#include <stdlib.h>
 #define CONFIG_FILE "/home/bo/workspace/fifaaficonfig"
 #define CONFIG_BITFLIP_FILE "/home/bo/workspace/bitflip"
-#define CONFIG_SHORNWRITE_FILE "/home/bo/workspace/bitflip"
+#define CONFIG_SHORNWRITE_FILE "/home/bo/workspace/shornwrite"
 
 #define SHORNWRITE_THRES 512
 
@@ -20,7 +20,7 @@ int inject(Config config, void *buf, size_t size){
     }
     if (strcmp("shornwrite", config.model_name) == 0){
         size_t new_size = prepare_shornwrite(buf,size,config.shornwrite_portion);
-        log_msg("shornwrite: %d ",new_size);
+        log_msg("shornwrite: %d %d",new_size,size);
         return new_size;
     }
      if (strcmp("dropwrite", config.model_name) == 0){
@@ -39,12 +39,13 @@ char* prepare_bitflip(void * buf, size_t size){
 
 int prepare_shornwrite(void *buf, size_t size, float shorn_portion){
     char *buf_char = (char *)(buf);
+    int size_new = 0;
     if (size < SHORNWRITE_THRES){
        return size;
     }
     else{
-        size = (int)(size*shorn_portion);
-        return size;
+        size_new = (int)(size*shorn_portion);
+        return size_new;
     }
 }
 
@@ -107,16 +108,21 @@ int load_config(Config *config){
         log_msg("get into consecutive_bits file");
         read = getline(&line[4], &len, f_spec);
         config->consecutive_bits = atoi(line[4]);
+    	log_msg("consecutive bits: %d\n",config->consecutive_bits);
         fclose(f_spec);
     }
     if (strcmp("shornwrite\0", config->model_name) == 0){
-        f_spec = fopen(config->model_name,"r");
+        f_spec = fopen(CONFIG_SHORNWRITE_FILE,"r");
         if (f_spec == NULL){
             log_msg("Can not open spec file for shornwrite");
             return -1;
         }
         read = getline(&line[4], &len, f_spec);
-        config->shornwrite_portion = atof(line[4]);
+    	//line[4][strlen(line[4])-1] = '\0';
+    	log_msg("portion: %s\n",line[4]);
+        config->shornwrite_portion = (float)atof(line[4]);
+        //config->shornwrite_portion = 0.5;
+    	log_msg("portion: %f\n",config->shornwrite_portion);
         fclose(f_spec);
     }
     return 0;
