@@ -44,7 +44,7 @@ int prepare_shornwrite(void *buf, size_t size, float shorn_portion){
        return size;
     }
     else{
-        size_new = (int)(size*shorn_portion);
+        size_new = size - SHORNWRITE_THRES*(int)(8*(1-shorn_portion));
         return size_new;
     }
 }
