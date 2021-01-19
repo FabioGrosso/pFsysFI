@@ -21,11 +21,11 @@ int inject(Config config, void *buf, size_t size){
     }
     if (strcmp("shornwrite", config.model_name) == 0){
         size_t new_size = prepare_shornwrite(buf,size,config.shornwrite_portion);
-        log_msg("shornwrite: %d %d",new_size,size);
+        log_msg("shornwrite: %d %d\n",new_size,size);
         return new_size;
     }
     if (strcmp("droppedwrite", config.model_name) == 0){
-         log_msg("droppedwrite: 0");
+         log_msg("droppedwrite: 0\n");
         return 0;
     }
 }
