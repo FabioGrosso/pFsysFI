@@ -13,6 +13,7 @@
 #define SHORNWRITE_THRES 512
 
 int inject(Config config, void *buf, size_t size){
+    log_msg("%s\n",config.model_name);
     if (strcmp("bitflip",config.model_name) == 0){
         char * data = prepare_bitflip(buf,size);
         bit_flip(data,config.consecutive_bits);
@@ -23,7 +24,7 @@ int inject(Config config, void *buf, size_t size){
         log_msg("shornwrite: %d %d",new_size,size);
         return new_size;
     }
-     if (strcmp("droppedwrite", config.model_name) == 0){
+    if (strcmp("droppedwrite", config.model_name) == 0){
          log_msg("droppedwrite: 0");
         return 0;
     }
