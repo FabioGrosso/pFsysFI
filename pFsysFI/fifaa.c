@@ -383,6 +383,7 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
             if (write_counter == config.instance){
                  log_msg("hit the function\n");
                 new_size = inject(config,inject_buf,size);
+                log_msg("new size is %d\n",new_size);
             }
         }
     }
