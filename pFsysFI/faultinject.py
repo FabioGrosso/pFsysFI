@@ -336,8 +336,8 @@ for i in range(num_trial):
     path = os.path.join(str(i),"stderr")
     with open(path,"w") as f:
         f.write(stderr)
-    for app in app_file:
-        shutil.copy2(app,str(i))
+    for app1 in app_file:
+        shutil.copy2(app1,str(i))
     shutil.copy2(log_file,str(i))
     # unmount fuse
     execution = []
