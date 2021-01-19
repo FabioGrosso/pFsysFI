@@ -23,8 +23,8 @@ int inject(Config config, void *buf, size_t size){
         log_msg("shornwrite: %d %d",new_size,size);
         return new_size;
     }
-     if (strcmp("dropwrite", config.model_name) == 0){
-         log_msg("dropwrite: 0");
+     if (strcmp("droppedwrite", config.model_name) == 0){
+         log_msg("droppedwrite: 0");
         return 0;
     }
 }

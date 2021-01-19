@@ -88,6 +88,12 @@ def get_faultmodel_op(fault_model,fault_op_loader)->list:
             raise ValueError
         return fault_op_loader['shornwrite']
 
+     if fault_model == "droppedwrite":
+        if "droppedwrite" not in fault_op_loader:
+            print("droppedwrite fault op not configured")
+            raise ValueError
+        return fault_op_loader['droppedwrite']
+
 def get_target_op(op,file_op)->int:
 
     total = file_op[op]
