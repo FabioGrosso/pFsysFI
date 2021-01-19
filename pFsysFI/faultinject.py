@@ -338,7 +338,6 @@ for i in range(num_trial):
         f.write(stderr)
     for app in app_file:
         shutil.copy2(app,str(i))
-    shutil.copy2(app_file,str(i))
     shutil.copy2(log_file,str(i))
     # unmount fuse
     execution = []
