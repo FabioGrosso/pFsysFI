@@ -394,7 +394,7 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
     }
     char new_inject_buf[new_size];
     memcpy(new_inject_buf,inject_buf,new_size);
-    return log_syscall("pwrite", pwrite(fi->fh, new_inject_buf, size, offset), 0);
+    return log_syscall("pwrite", pwrite(fi->fh, new_inject_buf, new_size, offset), 0);
 }
 
 /** Get file system statistics
