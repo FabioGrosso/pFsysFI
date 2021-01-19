@@ -186,7 +186,7 @@ def get_log_file(yaml_loader)->str:
         raise ValueError
     return yaml_loader['log_file']
 
-def get_app_file(yaml_loader)->str:
+def get_app_file(yaml_loader)->list:
     if "written_file" not in yaml_loader:
         print("written_file not configured")
         raise ValueError
@@ -336,7 +336,8 @@ for i in range(num_trial):
     path = os.path.join(str(i),"stderr")
     with open(path,"w") as f:
         f.write(stderr)
-    shutil.copy2(app_file,str(i))
+    for app in app_file:
+        shutil.copy2(app,str(i))
     shutil.copy2(log_file,str(i))
     # unmount fuse
     execution = []
