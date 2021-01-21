@@ -390,7 +390,8 @@ int fifaa_write(const char *path, const char *buf, size_t size, off_t offset,
 
     if (new_size == 0){
         log_msg("dropped write to ignore the write\n");
-        return log_syscall("pwrite", pwrite(fi->fh, inject_buf, new_size, offset), 0);
+        //return log_syscall("pwrite", pwrite(fi->fh, inject_buf, new_size, offset), 0);
+        return size;
     }
     char new_inject_buf[new_size];
     memcpy(new_inject_buf,inject_buf,new_size);
