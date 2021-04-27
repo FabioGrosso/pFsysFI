@@ -10,7 +10,8 @@ benchmark: "./fuse_mount/x"
 parameters:
   #- "-i input"
   #- "-o output"
-written_file: "./fuse_mount/data.txt"
+written_file:
+        - "./fuse_mount/data.txt"
 log_file : "/home/daoce/Downloads/fifaa.log"
 
 injection:
