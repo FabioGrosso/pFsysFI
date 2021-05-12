@@ -30,7 +30,7 @@ def config_loader(configfile:str):
 def parse_log(logfile:str,yaml_loader) -> dict:
 
     file_op = {}
-    with open(logfile) as f:
+    with open(logfile,encoding='mac_roman') as f:
         lines = f.readlines()
         for line in lines:
             if FS_PREFIX in line:
