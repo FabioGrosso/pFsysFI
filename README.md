@@ -10,5 +10,5 @@ After install the fuse, change the **lib** and **include** of fuse in the Makefi
 
 Then change the dir of CONFIG_FILE, CONFIG_BITFLIP_FILE and, CONFIG_SHORNWRITE_FILE in the fault.c to be your favorite place to run the fault injection, i.e., **you_favor_dir**/fifaaficonfig, **you_favor_dir**/ bitflip, and **you_favor_dir**/shornwrite.
 
-Then go to **you_favor_dir** and mkdir fuse_dir (where the temp file would be) and mkdir root_dir (where the benchmark would be).
+Then go to **you_favor_dir** and **$ mkdir fuse_dir** (where the temp file would be) and **$ mkdir root_dir** (where the benchmark would be).
 
