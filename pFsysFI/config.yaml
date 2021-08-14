@@ -16,7 +16,7 @@ log_file : "/home/daoce/Downloads/fifaa.log"
 
 injection:
   # we now support multiple injection types:
-  # shornwrite, bitflip, dorppedwrite
+  # shornwrite, bitflip, droppedwrite
   inject_flag: 1
   fault_model: "bitflip" 
   num_trials: 2
@@ -28,7 +28,7 @@ fault_op:
   #shornwrite:
   #  - fifaa_write
 
-  #dropwrite:
+  #droppedwrite:
   #  - fifaa_write
 
 fault_model_spec:
