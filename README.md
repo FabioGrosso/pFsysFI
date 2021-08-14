@@ -16,7 +16,7 @@ Requirement: libfuse(https://github.com/libfuse/libfuse/release), Ubuntu
 
 3. You can try **$ make** now, and an executable named **fifaaFS** will appear
 
-4. Then go to **you_favor_dir** and **$ mkdir fuse_dir** (where the temp file would be) and **$ mkdir root_dir** (where the benchmark would be).
+4. Then go to **you_favor_dir** and **$ mkdir root_dir** (where the benchmark would be) and **$ mkdir fuse_dir** (where the file generate by benchmark would be) .
 
 5. We recommend that you copy the executable file generated in step 3 (**fifaaFS**) as well as **config.yaml** and **faultinject.py** into **you_favor_dir**
 
