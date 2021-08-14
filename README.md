@@ -10,7 +10,7 @@ Requirement: libfuse(https://github.com/libfuse/libfuse/release), Ubuntu
 
 ![image](https://user-images.githubusercontent.com/37393451/129422835-c1ce9014-0c8c-43bc-afc1-1700a96461e2.png)
 
-2. Then change the dir of CONFIG_FILE, CONFIG_BITFLIP_FILE and, CONFIG_SHORNWRITE_FILE in the fault.c to be your favorite place to run the fault injection, i.e., **you_favor_dir**/fifaaficonfig, **you_favor_dir**/ bitflip, and **you_favor_dir**/shornwrite.
+2. Then change the dir of **CONFIG_FILE**, **CONFIG_BITFLIP_FILE** and, **CONFIG_SHORNWRITE_FILE** in the fault.c to be your favorite place to run the fault injection, i.e., **you_favor_dir**/fifaaficonfig, **you_favor_dir**/ bitflip, and **you_favor_dir**/shornwrite.
 
 ![image](https://user-images.githubusercontent.com/37393451/129422844-97d1653c-5cd8-427f-a29a-902585993b58.png)
 
