@@ -6,7 +6,7 @@ This is the repo for file system fault injector. The idea is to help application
 # How to run
 Requirement: libfuse(https://github.com/libfuse/libfuse/release), Ubuntu
 
-1. After install the fuse, change the **lib** and **include** of fuse in the Makefile (normally, the include/ will be in your_dir/libfuse/include and the lib/ will be in the your_dir /libfuse/build/lib)
+1. After install the fuse, change the **INCLUDES** and **LFLAGS** of fuse in the Makefile (normally, the include/ will be in your_dir/libfuse/include and the lib/ will be in the your_dir /libfuse/build/lib)
 
 ![image](https://user-images.githubusercontent.com/37393451/129422835-c1ce9014-0c8c-43bc-afc1-1700a96461e2.png)
 
