@@ -42,6 +42,7 @@ And change the **written_file** to where the file would be written to as well as
 
 ![image](https://user-images.githubusercontent.com/37393451/129429481-5130c7c6-adbf-4932-aac6-606be50e7de1.png)
 
-You can change teh fault moule by adjusting the **fault_model**, **fault_op** and **fault_model_spec**.
-You can also change the runs number and chose whether to inject or not by adjusting **num_trials** and **inject_flag**(1 / 0)
+You can change the fault moule by adjusting the **fault_model**, **fault_op** and **fault_model_spec**.
+
+You can also change the runs number and chose whether to inject or not by adjusting **num_trials** and **inject_flag**(1 / 0).
 
