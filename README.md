@@ -22,3 +22,24 @@ Requirement: libfuse(https://github.com/libfuse/libfuse/release), Ubuntu
 
 ![image](https://user-images.githubusercontent.com/37393451/129422863-f4d8ddbe-c1ce-4f91-afa6-dbaa5b051773.png)
 
+6. Put the benchmark in **root_dir** and make sure that the file generate by benchmark would be place in to **fuse_dir**
+
+![image](https://user-images.githubusercontent.com/37393451/129429435-3bbb801b-0944-4faa-b8f6-2d04f10012cc.png)
+
+7. Then go to the config.yaml and change the parameter under fuse accordingly 
+
+![image](https://user-images.githubusercontent.com/37393451/129429441-4475a3f9-eadc-4fda-83ae-0040e0c2bf6b.png)
+
+You will also need to change the **benchmark** and **parameters** 
+
+![image](https://user-images.githubusercontent.com/37393451/129429455-07eb25f4-a2a3-4a2c-93d7-8e4eeddf85db.png)
+
+And change the written_file to where the file would be written to as well as change the log_file
+
+![image](https://user-images.githubusercontent.com/37393451/129429474-abbbe48b-54aa-43c4-a84a-46ac93c075b6.png)
+
+8. After that you can try “python3 faultinject.py” and the result will be in you_favor_dir
+
+![image](https://user-images.githubusercontent.com/37393451/129429481-5130c7c6-adbf-4932-aac6-606be50e7de1.png)
+
+
