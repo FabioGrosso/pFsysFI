@@ -4,9 +4,9 @@
 This is the repo for file system fault injector. The idea is to help application developers to understand how the application would react to the failure of the underline file system. For example, Lustre offers fail-over mode for applications to survive the failure. The fault injector would inject errors into the file system, which creates the senairo that makes the file system fall into the fail-over mode, and evaluate the impact on the application.
 
 # Installation & Run
-Requirement: libfuse(https://github.com/libfuse/libfuse/release), Ubuntu
+Requirement: libfuse(https://github.com/libfuse/libfuse), Ubuntu
 
-1. After installing the fuse, change the **INCLUDES** and **LFLAGS** of fuse in the Makefile (normally, the include/ will be in your_dir/libfuse/include and the lib/ will be in the your_dir /libfuse/build/lib)
+1. After installing the fuse, change the **INCLUDES** and **LFLAGS** of fuse in the Makefile (normally, the include/ will be in your_dir/libfuse/include and the lib/ will be in the your_dir/libfuse/build/lib)
 
 ![image](https://user-images.githubusercontent.com/37393451/129422835-c1ce9014-0c8c-43bc-afc1-1700a96461e2.png)
 
